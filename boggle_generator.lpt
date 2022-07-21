@@ -2,624 +2,759 @@
 \Problem name: boggle_generator
 
 Maximize
- obj1: x_0_X + x_1_X + x_2_X + x_3_X + x_4_X + x_5_X + x_6_X + x_7_X + x_8_X
-       + x_9_X + x_10_X + x_11_X + x_12_X + x_13_X + x_14_X + x_15_X
+ obj1: y_0 + y_1 + y_2 + y_3 + y_4 + y_5 + y_6 + y_7 + y_8 + y_9 + y_10 + y_11
+       + y_12 + y_13 + y_14 + y_15
 Subject To
- only_one_letter_in_square_0:    x_0_X + x_0_s + x_0_q + x_0_u + x_0_a + x_0_r
-                                 + x_0_e + x_0_b + x_0_t + x_0_h + x_0_o
-                                 + x_0_l  = 1
- only_one_letter_in_square_1:    x_1_X + x_1_s + x_1_q + x_1_u + x_1_a + x_1_r
-                                 + x_1_e + x_1_b + x_1_t + x_1_h + x_1_o
-                                 + x_1_l  = 1
- only_one_letter_in_square_2:    x_2_X + x_2_s + x_2_q + x_2_u + x_2_a + x_2_r
-                                 + x_2_e + x_2_b + x_2_t + x_2_h + x_2_o
-                                 + x_2_l  = 1
- only_one_letter_in_square_3:    x_3_X + x_3_s + x_3_q + x_3_u + x_3_a + x_3_r
-                                 + x_3_e + x_3_b + x_3_t + x_3_h + x_3_o
-                                 + x_3_l  = 1
- only_one_letter_in_square_4:    x_4_X + x_4_s + x_4_q + x_4_u + x_4_a + x_4_r
-                                 + x_4_e + x_4_b + x_4_t + x_4_h + x_4_o
-                                 + x_4_l  = 1
- only_one_letter_in_square_5:    x_5_X + x_5_s + x_5_q + x_5_u + x_5_a + x_5_r
-                                 + x_5_e + x_5_b + x_5_t + x_5_h + x_5_o
-                                 + x_5_l  = 1
- only_one_letter_in_square_6:    x_6_X + x_6_s + x_6_q + x_6_u + x_6_a + x_6_r
-                                 + x_6_e + x_6_b + x_6_t + x_6_h + x_6_o
-                                 + x_6_l  = 1
- only_one_letter_in_square_7:    x_7_X + x_7_s + x_7_q + x_7_u + x_7_a + x_7_r
-                                 + x_7_e + x_7_b + x_7_t + x_7_h + x_7_o
-                                 + x_7_l  = 1
- only_one_letter_in_square_8:    x_8_X + x_8_s + x_8_q + x_8_u + x_8_a + x_8_r
-                                 + x_8_e + x_8_b + x_8_t + x_8_h + x_8_o
-                                 + x_8_l  = 1
- only_one_letter_in_square_9:    x_9_X + x_9_s + x_9_q + x_9_u + x_9_a + x_9_r
-                                 + x_9_e + x_9_b + x_9_t + x_9_h + x_9_o
-                                 + x_9_l  = 1
- only_one_letter_in_square_10:   x_10_X + x_10_s + x_10_q + x_10_u + x_10_a
-                                 + x_10_r + x_10_e + x_10_b + x_10_t + x_10_h
-                                 + x_10_o + x_10_l  = 1
- only_one_letter_in_square_11:   x_11_X + x_11_s + x_11_q + x_11_u + x_11_a
-                                 + x_11_r + x_11_e + x_11_b + x_11_t + x_11_h
-                                 + x_11_o + x_11_l  = 1
- only_one_letter_in_square_12:   x_12_X + x_12_s + x_12_q + x_12_u + x_12_a
-                                 + x_12_r + x_12_e + x_12_b + x_12_t + x_12_h
-                                 + x_12_o + x_12_l  = 1
- only_one_letter_in_square_13:   x_13_X + x_13_s + x_13_q + x_13_u + x_13_a
-                                 + x_13_r + x_13_e + x_13_b + x_13_t + x_13_h
-                                 + x_13_o + x_13_l  = 1
- only_one_letter_in_square_14:   x_14_X + x_14_s + x_14_q + x_14_u + x_14_a
-                                 + x_14_r + x_14_e + x_14_b + x_14_t + x_14_h
-                                 + x_14_o + x_14_l  = 1
- only_one_letter_in_square_15:   x_15_X + x_15_s + x_15_q + x_15_u + x_15_a
-                                 + x_15_r + x_15_e + x_15_b + x_15_t + x_15_h
-                                 + x_15_o + x_15_l  = 1
- letter_X_must_appear_in_some_square: x_0_X + x_1_X + x_2_X + x_3_X + x_4_X
-                                 + x_5_X + x_6_X + x_7_X + x_8_X + x_9_X
-                                 + x_10_X + x_11_X + x_12_X + x_13_X + x_14_X
-                                 + x_15_X >= 1
- letter_s_must_appear_in_some_square: x_0_s + x_1_s + x_2_s + x_3_s + x_4_s
-                                 + x_5_s + x_6_s + x_7_s + x_8_s + x_9_s
-                                 + x_10_s + x_11_s + x_12_s + x_13_s + x_14_s
-                                 + x_15_s >= 1
- letter_q_must_appear_in_some_square: x_0_q + x_1_q + x_2_q + x_3_q + x_4_q
-                                 + x_5_q + x_6_q + x_7_q + x_8_q + x_9_q
-                                 + x_10_q + x_11_q + x_12_q + x_13_q + x_14_q
-                                 + x_15_q >= 1
- letter_u_must_appear_in_some_square: x_0_u + x_1_u + x_2_u + x_3_u + x_4_u
-                                 + x_5_u + x_6_u + x_7_u + x_8_u + x_9_u
-                                 + x_10_u + x_11_u + x_12_u + x_13_u + x_14_u
-                                 + x_15_u >= 1
- letter_a_must_appear_in_some_square: x_0_a + x_1_a + x_2_a + x_3_a + x_4_a
-                                 + x_5_a + x_6_a + x_7_a + x_8_a + x_9_a
-                                 + x_10_a + x_11_a + x_12_a + x_13_a + x_14_a
-                                 + x_15_a >= 1
- letter_r_must_appear_in_some_square: x_0_r + x_1_r + x_2_r + x_3_r + x_4_r
-                                 + x_5_r + x_6_r + x_7_r + x_8_r + x_9_r
-                                 + x_10_r + x_11_r + x_12_r + x_13_r + x_14_r
-                                 + x_15_r >= 1
- letter_e_must_appear_in_some_square: x_0_e + x_1_e + x_2_e + x_3_e + x_4_e
-                                 + x_5_e + x_6_e + x_7_e + x_8_e + x_9_e
-                                 + x_10_e + x_11_e + x_12_e + x_13_e + x_14_e
-                                 + x_15_e >= 1
- letter_b_must_appear_in_some_square: x_0_b + x_1_b + x_2_b + x_3_b + x_4_b
-                                 + x_5_b + x_6_b + x_7_b + x_8_b + x_9_b
-                                 + x_10_b + x_11_b + x_12_b + x_13_b + x_14_b
-                                 + x_15_b >= 1
- letter_t_must_appear_in_some_square: x_0_t + x_1_t + x_2_t + x_3_t + x_4_t
-                                 + x_5_t + x_6_t + x_7_t + x_8_t + x_9_t
-                                 + x_10_t + x_11_t + x_12_t + x_13_t + x_14_t
-                                 + x_15_t >= 1
- letter_h_must_appear_in_some_square: x_0_h + x_1_h + x_2_h + x_3_h + x_4_h
-                                 + x_5_h + x_6_h + x_7_h + x_8_h + x_9_h
-                                 + x_10_h + x_11_h + x_12_h + x_13_h + x_14_h
-                                 + x_15_h >= 1
- letter_o_must_appear_in_some_square: x_0_o + x_1_o + x_2_o + x_3_o + x_4_o
-                                 + x_5_o + x_6_o + x_7_o + x_8_o + x_9_o
-                                 + x_10_o + x_11_o + x_12_o + x_13_o + x_14_o
-                                 + x_15_o >= 1
- letter_l_must_appear_in_some_square: x_0_l + x_1_l + x_2_l + x_3_l + x_4_l
-                                 + x_5_l + x_6_l + x_7_l + x_8_l + x_9_l
-                                 + x_10_l + x_11_l + x_12_l + x_13_l + x_14_l
-                                 + x_15_l >= 1
- square_s_q_square_0:            - x_0_s + x_1_q + x_4_q + x_5_q >= 0
- square_s_q_square_1:            x_0_q - x_1_s + x_2_q + x_4_q + x_5_q + x_6_q
+ only_one_letter_in_square_0:    y_0 + x_gold_0_g_0 + x_gold_1_o_0
+                                 + x_gold_2_l_0 + x_gold_3_d_0 + x_blue_0_b_0
+                                 + x_blue_1_l_0 + x_blue_2_u_0 + x_blue_3_e_0
+                                 + x_red_0_r_0 + x_red_1_e_0 + x_red_2_d_0  = 1
+ only_one_letter_in_square_1:    y_1 + x_gold_0_g_1 + x_gold_1_o_1
+                                 + x_gold_2_l_1 + x_gold_3_d_1 + x_blue_0_b_1
+                                 + x_blue_1_l_1 + x_blue_2_u_1 + x_blue_3_e_1
+                                 + x_red_0_r_1 + x_red_1_e_1 + x_red_2_d_1  = 1
+ only_one_letter_in_square_2:    y_2 + x_gold_0_g_2 + x_gold_1_o_2
+                                 + x_gold_2_l_2 + x_gold_3_d_2 + x_blue_0_b_2
+                                 + x_blue_1_l_2 + x_blue_2_u_2 + x_blue_3_e_2
+                                 + x_red_0_r_2 + x_red_1_e_2 + x_red_2_d_2  = 1
+ only_one_letter_in_square_3:    y_3 + x_gold_0_g_3 + x_gold_1_o_3
+                                 + x_gold_2_l_3 + x_gold_3_d_3 + x_blue_0_b_3
+                                 + x_blue_1_l_3 + x_blue_2_u_3 + x_blue_3_e_3
+                                 + x_red_0_r_3 + x_red_1_e_3 + x_red_2_d_3  = 1
+ only_one_letter_in_square_4:    y_4 + x_gold_0_g_4 + x_gold_1_o_4
+                                 + x_gold_2_l_4 + x_gold_3_d_4 + x_blue_0_b_4
+                                 + x_blue_1_l_4 + x_blue_2_u_4 + x_blue_3_e_4
+                                 + x_red_0_r_4 + x_red_1_e_4 + x_red_2_d_4  = 1
+ only_one_letter_in_square_5:    y_5 + x_gold_0_g_5 + x_gold_1_o_5
+                                 + x_gold_2_l_5 + x_gold_3_d_5 + x_blue_0_b_5
+                                 + x_blue_1_l_5 + x_blue_2_u_5 + x_blue_3_e_5
+                                 + x_red_0_r_5 + x_red_1_e_5 + x_red_2_d_5  = 1
+ only_one_letter_in_square_6:    y_6 + x_gold_0_g_6 + x_gold_1_o_6
+                                 + x_gold_2_l_6 + x_gold_3_d_6 + x_blue_0_b_6
+                                 + x_blue_1_l_6 + x_blue_2_u_6 + x_blue_3_e_6
+                                 + x_red_0_r_6 + x_red_1_e_6 + x_red_2_d_6  = 1
+ only_one_letter_in_square_7:    y_7 + x_gold_0_g_7 + x_gold_1_o_7
+                                 + x_gold_2_l_7 + x_gold_3_d_7 + x_blue_0_b_7
+                                 + x_blue_1_l_7 + x_blue_2_u_7 + x_blue_3_e_7
+                                 + x_red_0_r_7 + x_red_1_e_7 + x_red_2_d_7  = 1
+ only_one_letter_in_square_8:    y_8 + x_gold_0_g_8 + x_gold_1_o_8
+                                 + x_gold_2_l_8 + x_gold_3_d_8 + x_blue_0_b_8
+                                 + x_blue_1_l_8 + x_blue_2_u_8 + x_blue_3_e_8
+                                 + x_red_0_r_8 + x_red_1_e_8 + x_red_2_d_8  = 1
+ only_one_letter_in_square_9:    y_9 + x_gold_0_g_9 + x_gold_1_o_9
+                                 + x_gold_2_l_9 + x_gold_3_d_9 + x_blue_0_b_9
+                                 + x_blue_1_l_9 + x_blue_2_u_9 + x_blue_3_e_9
+                                 + x_red_0_r_9 + x_red_1_e_9 + x_red_2_d_9  = 1
+ only_one_letter_in_square_10:   y_10 + x_gold_0_g_10 + x_gold_1_o_10
+                                 + x_gold_2_l_10 + x_gold_3_d_10
+                                 + x_blue_0_b_10 + x_blue_1_l_10
+                                 + x_blue_2_u_10 + x_blue_3_e_10 + x_red_0_r_10
+                                 + x_red_1_e_10 + x_red_2_d_10  = 1
+ only_one_letter_in_square_11:   y_11 + x_gold_0_g_11 + x_gold_1_o_11
+                                 + x_gold_2_l_11 + x_gold_3_d_11
+                                 + x_blue_0_b_11 + x_blue_1_l_11
+                                 + x_blue_2_u_11 + x_blue_3_e_11 + x_red_0_r_11
+                                 + x_red_1_e_11 + x_red_2_d_11  = 1
+ only_one_letter_in_square_12:   y_12 + x_gold_0_g_12 + x_gold_1_o_12
+                                 + x_gold_2_l_12 + x_gold_3_d_12
+                                 + x_blue_0_b_12 + x_blue_1_l_12
+                                 + x_blue_2_u_12 + x_blue_3_e_12 + x_red_0_r_12
+                                 + x_red_1_e_12 + x_red_2_d_12  = 1
+ only_one_letter_in_square_13:   y_13 + x_gold_0_g_13 + x_gold_1_o_13
+                                 + x_gold_2_l_13 + x_gold_3_d_13
+                                 + x_blue_0_b_13 + x_blue_1_l_13
+                                 + x_blue_2_u_13 + x_blue_3_e_13 + x_red_0_r_13
+                                 + x_red_1_e_13 + x_red_2_d_13  = 1
+ only_one_letter_in_square_14:   y_14 + x_gold_0_g_14 + x_gold_1_o_14
+                                 + x_gold_2_l_14 + x_gold_3_d_14
+                                 + x_blue_0_b_14 + x_blue_1_l_14
+                                 + x_blue_2_u_14 + x_blue_3_e_14 + x_red_0_r_14
+                                 + x_red_1_e_14 + x_red_2_d_14  = 1
+ only_one_letter_in_square_15:   y_15 + x_gold_0_g_15 + x_gold_1_o_15
+                                 + x_gold_2_l_15 + x_gold_3_d_15
+                                 + x_blue_0_b_15 + x_blue_1_l_15
+                                 + x_blue_2_u_15 + x_blue_3_e_15 + x_red_0_r_15
+                                 + x_red_1_e_15 + x_red_2_d_15  = 1
+ gold_0_g_must_appear_in_some_square: x_gold_0_g_0 + x_gold_0_g_1
+                                 + x_gold_0_g_2 + x_gold_0_g_3 + x_gold_0_g_4
+                                 + x_gold_0_g_5 + x_gold_0_g_6 + x_gold_0_g_7
+                                 + x_gold_0_g_8 + x_gold_0_g_9 + x_gold_0_g_10
+                                 + x_gold_0_g_11 + x_gold_0_g_12
+                                 + x_gold_0_g_13 + x_gold_0_g_14
+                                 + x_gold_0_g_15 >= 1
+ gold_1_o_must_appear_in_some_square: x_gold_1_o_0 + x_gold_1_o_1
+                                 + x_gold_1_o_2 + x_gold_1_o_3 + x_gold_1_o_4
+                                 + x_gold_1_o_5 + x_gold_1_o_6 + x_gold_1_o_7
+                                 + x_gold_1_o_8 + x_gold_1_o_9 + x_gold_1_o_10
+                                 + x_gold_1_o_11 + x_gold_1_o_12
+                                 + x_gold_1_o_13 + x_gold_1_o_14
+                                 + x_gold_1_o_15 >= 1
+ gold_2_l_must_appear_in_some_square: x_gold_2_l_0 + x_gold_2_l_1
+                                 + x_gold_2_l_2 + x_gold_2_l_3 + x_gold_2_l_4
+                                 + x_gold_2_l_5 + x_gold_2_l_6 + x_gold_2_l_7
+                                 + x_gold_2_l_8 + x_gold_2_l_9 + x_gold_2_l_10
+                                 + x_gold_2_l_11 + x_gold_2_l_12
+                                 + x_gold_2_l_13 + x_gold_2_l_14
+                                 + x_gold_2_l_15 >= 1
+ gold_3_d_must_appear_in_some_square: x_gold_3_d_0 + x_gold_3_d_1
+                                 + x_gold_3_d_2 + x_gold_3_d_3 + x_gold_3_d_4
+                                 + x_gold_3_d_5 + x_gold_3_d_6 + x_gold_3_d_7
+                                 + x_gold_3_d_8 + x_gold_3_d_9 + x_gold_3_d_10
+                                 + x_gold_3_d_11 + x_gold_3_d_12
+                                 + x_gold_3_d_13 + x_gold_3_d_14
+                                 + x_gold_3_d_15 >= 1
+ blue_0_b_must_appear_in_some_square: x_blue_0_b_0 + x_blue_0_b_1
+                                 + x_blue_0_b_2 + x_blue_0_b_3 + x_blue_0_b_4
+                                 + x_blue_0_b_5 + x_blue_0_b_6 + x_blue_0_b_7
+                                 + x_blue_0_b_8 + x_blue_0_b_9 + x_blue_0_b_10
+                                 + x_blue_0_b_11 + x_blue_0_b_12
+                                 + x_blue_0_b_13 + x_blue_0_b_14
+                                 + x_blue_0_b_15 >= 1
+ blue_1_l_must_appear_in_some_square: x_blue_1_l_0 + x_blue_1_l_1
+                                 + x_blue_1_l_2 + x_blue_1_l_3 + x_blue_1_l_4
+                                 + x_blue_1_l_5 + x_blue_1_l_6 + x_blue_1_l_7
+                                 + x_blue_1_l_8 + x_blue_1_l_9 + x_blue_1_l_10
+                                 + x_blue_1_l_11 + x_blue_1_l_12
+                                 + x_blue_1_l_13 + x_blue_1_l_14
+                                 + x_blue_1_l_15 >= 1
+ blue_2_u_must_appear_in_some_square: x_blue_2_u_0 + x_blue_2_u_1
+                                 + x_blue_2_u_2 + x_blue_2_u_3 + x_blue_2_u_4
+                                 + x_blue_2_u_5 + x_blue_2_u_6 + x_blue_2_u_7
+                                 + x_blue_2_u_8 + x_blue_2_u_9 + x_blue_2_u_10
+                                 + x_blue_2_u_11 + x_blue_2_u_12
+                                 + x_blue_2_u_13 + x_blue_2_u_14
+                                 + x_blue_2_u_15 >= 1
+ blue_3_e_must_appear_in_some_square: x_blue_3_e_0 + x_blue_3_e_1
+                                 + x_blue_3_e_2 + x_blue_3_e_3 + x_blue_3_e_4
+                                 + x_blue_3_e_5 + x_blue_3_e_6 + x_blue_3_e_7
+                                 + x_blue_3_e_8 + x_blue_3_e_9 + x_blue_3_e_10
+                                 + x_blue_3_e_11 + x_blue_3_e_12
+                                 + x_blue_3_e_13 + x_blue_3_e_14
+                                 + x_blue_3_e_15 >= 1
+ red_0_r_must_appear_in_some_square: x_red_0_r_0 + x_red_0_r_1 + x_red_0_r_2
+                                 + x_red_0_r_3 + x_red_0_r_4 + x_red_0_r_5
+                                 + x_red_0_r_6 + x_red_0_r_7 + x_red_0_r_8
+                                 + x_red_0_r_9 + x_red_0_r_10 + x_red_0_r_11
+                                 + x_red_0_r_12 + x_red_0_r_13 + x_red_0_r_14
+                                 + x_red_0_r_15 >= 1
+ red_1_e_must_appear_in_some_square: x_red_1_e_0 + x_red_1_e_1 + x_red_1_e_2
+                                 + x_red_1_e_3 + x_red_1_e_4 + x_red_1_e_5
+                                 + x_red_1_e_6 + x_red_1_e_7 + x_red_1_e_8
+                                 + x_red_1_e_9 + x_red_1_e_10 + x_red_1_e_11
+                                 + x_red_1_e_12 + x_red_1_e_13 + x_red_1_e_14
+                                 + x_red_1_e_15 >= 1
+ red_2_d_must_appear_in_some_square: x_red_2_d_0 + x_red_2_d_1 + x_red_2_d_2
+                                 + x_red_2_d_3 + x_red_2_d_4 + x_red_2_d_5
+                                 + x_red_2_d_6 + x_red_2_d_7 + x_red_2_d_8
+                                 + x_red_2_d_9 + x_red_2_d_10 + x_red_2_d_11
+                                 + x_red_2_d_12 + x_red_2_d_13 + x_red_2_d_14
+                                 + x_red_2_d_15 >= 1
+ gold_g_o_neighborhood_of_square_0: - x_gold_0_g_0 + x_gold_1_o_1
+                                 + x_gold_1_o_4 + x_gold_1_o_5 >= 0
+ gold_g_o_neighborhood_of_square_1: - x_gold_0_g_1 + x_gold_1_o_0
+                                 + x_gold_1_o_2 + x_gold_1_o_4 + x_gold_1_o_5
+                                 + x_gold_1_o_6 >= 0
+ gold_g_o_neighborhood_of_square_2: - x_gold_0_g_2 + x_gold_1_o_1
+                                 + x_gold_1_o_3 + x_gold_1_o_5 + x_gold_1_o_6
+                                 + x_gold_1_o_7 >= 0
+ gold_g_o_neighborhood_of_square_3: - x_gold_0_g_3 + x_gold_1_o_2
+                                 + x_gold_1_o_6 + x_gold_1_o_7 >= 0
+ gold_g_o_neighborhood_of_square_4: - x_gold_0_g_4 + x_gold_1_o_0
+                                 + x_gold_1_o_1 + x_gold_1_o_5 + x_gold_1_o_8
+                                 + x_gold_1_o_9 >= 0
+ gold_g_o_neighborhood_of_square_5: - x_gold_0_g_5 + x_gold_1_o_0
+                                 + x_gold_1_o_1 + x_gold_1_o_2 + x_gold_1_o_4
+                                 + x_gold_1_o_6 + x_gold_1_o_8 + x_gold_1_o_9
+                                 + x_gold_1_o_10 >= 0
+ gold_g_o_neighborhood_of_square_6: - x_gold_0_g_6 + x_gold_1_o_1
+                                 + x_gold_1_o_2 + x_gold_1_o_3 + x_gold_1_o_5
+                                 + x_gold_1_o_7 + x_gold_1_o_9 + x_gold_1_o_10
+                                 + x_gold_1_o_11 >= 0
+ gold_g_o_neighborhood_of_square_7: - x_gold_0_g_7 + x_gold_1_o_2
+                                 + x_gold_1_o_3 + x_gold_1_o_6 + x_gold_1_o_10
+                                 + x_gold_1_o_11 >= 0
+ gold_g_o_neighborhood_of_square_8: - x_gold_0_g_8 + x_gold_1_o_4
+                                 + x_gold_1_o_5 + x_gold_1_o_9 + x_gold_1_o_12
+                                 + x_gold_1_o_13 >= 0
+ gold_g_o_neighborhood_of_square_9: - x_gold_0_g_9 + x_gold_1_o_4
+                                 + x_gold_1_o_5 + x_gold_1_o_6 + x_gold_1_o_8
+                                 + x_gold_1_o_10 + x_gold_1_o_12
+                                 + x_gold_1_o_13 + x_gold_1_o_14 >= 0
+ gold_g_o_neighborhood_of_square_10: - x_gold_0_g_10 + x_gold_1_o_5
+                                 + x_gold_1_o_6 + x_gold_1_o_7 + x_gold_1_o_9
+                                 + x_gold_1_o_11 + x_gold_1_o_13
+                                 + x_gold_1_o_14 + x_gold_1_o_15 >= 0
+ gold_g_o_neighborhood_of_square_11: - x_gold_0_g_11 + x_gold_1_o_6
+                                 + x_gold_1_o_7 + x_gold_1_o_10 + x_gold_1_o_14
+                                 + x_gold_1_o_15 >= 0
+ gold_g_o_neighborhood_of_square_12: - x_gold_0_g_12 + x_gold_1_o_8
+                                 + x_gold_1_o_9 + x_gold_1_o_13 >= 0
+ gold_g_o_neighborhood_of_square_13: - x_gold_0_g_13 + x_gold_1_o_8
+                                 + x_gold_1_o_9 + x_gold_1_o_10 + x_gold_1_o_12
+                                 + x_gold_1_o_14 >= 0
+ gold_g_o_neighborhood_of_square_14: - x_gold_0_g_14 + x_gold_1_o_9
+                                 + x_gold_1_o_10 + x_gold_1_o_11
+                                 + x_gold_1_o_13 + x_gold_1_o_15 >= 0
+ gold_g_o_neighborhood_of_square_15: - x_gold_0_g_15 + x_gold_1_o_10
+                                 + x_gold_1_o_11 + x_gold_1_o_14 >= 0
+ gold_o_l_neighborhood_of_square_0: - x_gold_1_o_0 + x_gold_2_l_1
+                                 + x_gold_2_l_4 + x_gold_2_l_5 >= 0
+ gold_o_l_neighborhood_of_square_1: - x_gold_1_o_1 + x_gold_2_l_0
+                                 + x_gold_2_l_2 + x_gold_2_l_4 + x_gold_2_l_5
+                                 + x_gold_2_l_6 >= 0
+ gold_o_l_neighborhood_of_square_2: - x_gold_1_o_2 + x_gold_2_l_1
+                                 + x_gold_2_l_3 + x_gold_2_l_5 + x_gold_2_l_6
+                                 + x_gold_2_l_7 >= 0
+ gold_o_l_neighborhood_of_square_3: - x_gold_1_o_3 + x_gold_2_l_2
+                                 + x_gold_2_l_6 + x_gold_2_l_7 >= 0
+ gold_o_l_neighborhood_of_square_4: - x_gold_1_o_4 + x_gold_2_l_0
+                                 + x_gold_2_l_1 + x_gold_2_l_5 + x_gold_2_l_8
+                                 + x_gold_2_l_9 >= 0
+ gold_o_l_neighborhood_of_square_5: - x_gold_1_o_5 + x_gold_2_l_0
+                                 + x_gold_2_l_1 + x_gold_2_l_2 + x_gold_2_l_4
+                                 + x_gold_2_l_6 + x_gold_2_l_8 + x_gold_2_l_9
+                                 + x_gold_2_l_10 >= 0
+ gold_o_l_neighborhood_of_square_6: - x_gold_1_o_6 + x_gold_2_l_1
+                                 + x_gold_2_l_2 + x_gold_2_l_3 + x_gold_2_l_5
+                                 + x_gold_2_l_7 + x_gold_2_l_9 + x_gold_2_l_10
+                                 + x_gold_2_l_11 >= 0
+ gold_o_l_neighborhood_of_square_7: - x_gold_1_o_7 + x_gold_2_l_2
+                                 + x_gold_2_l_3 + x_gold_2_l_6 + x_gold_2_l_10
+                                 + x_gold_2_l_11 >= 0
+ gold_o_l_neighborhood_of_square_8: - x_gold_1_o_8 + x_gold_2_l_4
+                                 + x_gold_2_l_5 + x_gold_2_l_9 + x_gold_2_l_12
+                                 + x_gold_2_l_13 >= 0
+ gold_o_l_neighborhood_of_square_9: - x_gold_1_o_9 + x_gold_2_l_4
+                                 + x_gold_2_l_5 + x_gold_2_l_6 + x_gold_2_l_8
+                                 + x_gold_2_l_10 + x_gold_2_l_12
+                                 + x_gold_2_l_13 + x_gold_2_l_14 >= 0
+ gold_o_l_neighborhood_of_square_10: - x_gold_1_o_10 + x_gold_2_l_5
+                                 + x_gold_2_l_6 + x_gold_2_l_7 + x_gold_2_l_9
+                                 + x_gold_2_l_11 + x_gold_2_l_13
+                                 + x_gold_2_l_14 + x_gold_2_l_15 >= 0
+ gold_o_l_neighborhood_of_square_11: - x_gold_1_o_11 + x_gold_2_l_6
+                                 + x_gold_2_l_7 + x_gold_2_l_10 + x_gold_2_l_14
+                                 + x_gold_2_l_15 >= 0
+ gold_o_l_neighborhood_of_square_12: - x_gold_1_o_12 + x_gold_2_l_8
+                                 + x_gold_2_l_9 + x_gold_2_l_13 >= 0
+ gold_o_l_neighborhood_of_square_13: - x_gold_1_o_13 + x_gold_2_l_8
+                                 + x_gold_2_l_9 + x_gold_2_l_10 + x_gold_2_l_12
+                                 + x_gold_2_l_14 >= 0
+ gold_o_l_neighborhood_of_square_14: - x_gold_1_o_14 + x_gold_2_l_9
+                                 + x_gold_2_l_10 + x_gold_2_l_11
+                                 + x_gold_2_l_13 + x_gold_2_l_15 >= 0
+ gold_o_l_neighborhood_of_square_15: - x_gold_1_o_15 + x_gold_2_l_10
+                                 + x_gold_2_l_11 + x_gold_2_l_14 >= 0
+ gold_l_d_neighborhood_of_square_0: - x_gold_2_l_0 + x_gold_3_d_1
+                                 + x_gold_3_d_4 + x_gold_3_d_5 >= 0
+ gold_l_d_neighborhood_of_square_1: - x_gold_2_l_1 + x_gold_3_d_0
+                                 + x_gold_3_d_2 + x_gold_3_d_4 + x_gold_3_d_5
+                                 + x_gold_3_d_6 >= 0
+ gold_l_d_neighborhood_of_square_2: - x_gold_2_l_2 + x_gold_3_d_1
+                                 + x_gold_3_d_3 + x_gold_3_d_5 + x_gold_3_d_6
+                                 + x_gold_3_d_7 >= 0
+ gold_l_d_neighborhood_of_square_3: - x_gold_2_l_3 + x_gold_3_d_2
+                                 + x_gold_3_d_6 + x_gold_3_d_7 >= 0
+ gold_l_d_neighborhood_of_square_4: - x_gold_2_l_4 + x_gold_3_d_0
+                                 + x_gold_3_d_1 + x_gold_3_d_5 + x_gold_3_d_8
+                                 + x_gold_3_d_9 >= 0
+ gold_l_d_neighborhood_of_square_5: - x_gold_2_l_5 + x_gold_3_d_0
+                                 + x_gold_3_d_1 + x_gold_3_d_2 + x_gold_3_d_4
+                                 + x_gold_3_d_6 + x_gold_3_d_8 + x_gold_3_d_9
+                                 + x_gold_3_d_10 >= 0
+ gold_l_d_neighborhood_of_square_6: - x_gold_2_l_6 + x_gold_3_d_1
+                                 + x_gold_3_d_2 + x_gold_3_d_3 + x_gold_3_d_5
+                                 + x_gold_3_d_7 + x_gold_3_d_9 + x_gold_3_d_10
+                                 + x_gold_3_d_11 >= 0
+ gold_l_d_neighborhood_of_square_7: - x_gold_2_l_7 + x_gold_3_d_2
+                                 + x_gold_3_d_3 + x_gold_3_d_6 + x_gold_3_d_10
+                                 + x_gold_3_d_11 >= 0
+ gold_l_d_neighborhood_of_square_8: - x_gold_2_l_8 + x_gold_3_d_4
+                                 + x_gold_3_d_5 + x_gold_3_d_9 + x_gold_3_d_12
+                                 + x_gold_3_d_13 >= 0
+ gold_l_d_neighborhood_of_square_9: - x_gold_2_l_9 + x_gold_3_d_4
+                                 + x_gold_3_d_5 + x_gold_3_d_6 + x_gold_3_d_8
+                                 + x_gold_3_d_10 + x_gold_3_d_12
+                                 + x_gold_3_d_13 + x_gold_3_d_14 >= 0
+ gold_l_d_neighborhood_of_square_10: - x_gold_2_l_10 + x_gold_3_d_5
+                                 + x_gold_3_d_6 + x_gold_3_d_7 + x_gold_3_d_9
+                                 + x_gold_3_d_11 + x_gold_3_d_13
+                                 + x_gold_3_d_14 + x_gold_3_d_15 >= 0
+ gold_l_d_neighborhood_of_square_11: - x_gold_2_l_11 + x_gold_3_d_6
+                                 + x_gold_3_d_7 + x_gold_3_d_10 + x_gold_3_d_14
+                                 + x_gold_3_d_15 >= 0
+ gold_l_d_neighborhood_of_square_12: - x_gold_2_l_12 + x_gold_3_d_8
+                                 + x_gold_3_d_9 + x_gold_3_d_13 >= 0
+ gold_l_d_neighborhood_of_square_13: - x_gold_2_l_13 + x_gold_3_d_8
+                                 + x_gold_3_d_9 + x_gold_3_d_10 + x_gold_3_d_12
+                                 + x_gold_3_d_14 >= 0
+ gold_l_d_neighborhood_of_square_14: - x_gold_2_l_14 + x_gold_3_d_9
+                                 + x_gold_3_d_10 + x_gold_3_d_11
+                                 + x_gold_3_d_13 + x_gold_3_d_15 >= 0
+ gold_l_d_neighborhood_of_square_15: - x_gold_2_l_15 + x_gold_3_d_10
+                                 + x_gold_3_d_11 + x_gold_3_d_14 >= 0
+ blue_b_l_neighborhood_of_square_0: - x_blue_0_b_0 + x_blue_1_l_1
+                                 + x_blue_1_l_4 + x_blue_1_l_5 >= 0
+ blue_b_l_neighborhood_of_square_1: - x_blue_0_b_1 + x_blue_1_l_0
+                                 + x_blue_1_l_2 + x_blue_1_l_4 + x_blue_1_l_5
+                                 + x_blue_1_l_6 >= 0
+ blue_b_l_neighborhood_of_square_2: - x_blue_0_b_2 + x_blue_1_l_1
+                                 + x_blue_1_l_3 + x_blue_1_l_5 + x_blue_1_l_6
+                                 + x_blue_1_l_7 >= 0
+ blue_b_l_neighborhood_of_square_3: - x_blue_0_b_3 + x_blue_1_l_2
+                                 + x_blue_1_l_6 + x_blue_1_l_7 >= 0
+ blue_b_l_neighborhood_of_square_4: - x_blue_0_b_4 + x_blue_1_l_0
+                                 + x_blue_1_l_1 + x_blue_1_l_5 + x_blue_1_l_8
+                                 + x_blue_1_l_9 >= 0
+ blue_b_l_neighborhood_of_square_5: - x_blue_0_b_5 + x_blue_1_l_0
+                                 + x_blue_1_l_1 + x_blue_1_l_2 + x_blue_1_l_4
+                                 + x_blue_1_l_6 + x_blue_1_l_8 + x_blue_1_l_9
+                                 + x_blue_1_l_10 >= 0
+ blue_b_l_neighborhood_of_square_6: - x_blue_0_b_6 + x_blue_1_l_1
+                                 + x_blue_1_l_2 + x_blue_1_l_3 + x_blue_1_l_5
+                                 + x_blue_1_l_7 + x_blue_1_l_9 + x_blue_1_l_10
+                                 + x_blue_1_l_11 >= 0
+ blue_b_l_neighborhood_of_square_7: - x_blue_0_b_7 + x_blue_1_l_2
+                                 + x_blue_1_l_3 + x_blue_1_l_6 + x_blue_1_l_10
+                                 + x_blue_1_l_11 >= 0
+ blue_b_l_neighborhood_of_square_8: - x_blue_0_b_8 + x_blue_1_l_4
+                                 + x_blue_1_l_5 + x_blue_1_l_9 + x_blue_1_l_12
+                                 + x_blue_1_l_13 >= 0
+ blue_b_l_neighborhood_of_square_9: - x_blue_0_b_9 + x_blue_1_l_4
+                                 + x_blue_1_l_5 + x_blue_1_l_6 + x_blue_1_l_8
+                                 + x_blue_1_l_10 + x_blue_1_l_12
+                                 + x_blue_1_l_13 + x_blue_1_l_14 >= 0
+ blue_b_l_neighborhood_of_square_10: - x_blue_0_b_10 + x_blue_1_l_5
+                                 + x_blue_1_l_6 + x_blue_1_l_7 + x_blue_1_l_9
+                                 + x_blue_1_l_11 + x_blue_1_l_13
+                                 + x_blue_1_l_14 + x_blue_1_l_15 >= 0
+ blue_b_l_neighborhood_of_square_11: - x_blue_0_b_11 + x_blue_1_l_6
+                                 + x_blue_1_l_7 + x_blue_1_l_10 + x_blue_1_l_14
+                                 + x_blue_1_l_15 >= 0
+ blue_b_l_neighborhood_of_square_12: - x_blue_0_b_12 + x_blue_1_l_8
+                                 + x_blue_1_l_9 + x_blue_1_l_13 >= 0
+ blue_b_l_neighborhood_of_square_13: - x_blue_0_b_13 + x_blue_1_l_8
+                                 + x_blue_1_l_9 + x_blue_1_l_10 + x_blue_1_l_12
+                                 + x_blue_1_l_14 >= 0
+ blue_b_l_neighborhood_of_square_14: - x_blue_0_b_14 + x_blue_1_l_9
+                                 + x_blue_1_l_10 + x_blue_1_l_11
+                                 + x_blue_1_l_13 + x_blue_1_l_15 >= 0
+ blue_b_l_neighborhood_of_square_15: - x_blue_0_b_15 + x_blue_1_l_10
+                                 + x_blue_1_l_11 + x_blue_1_l_14 >= 0
+ blue_l_u_neighborhood_of_square_0: - x_blue_1_l_0 + x_blue_2_u_1
+                                 + x_blue_2_u_4 + x_blue_2_u_5 >= 0
+ blue_l_u_neighborhood_of_square_1: - x_blue_1_l_1 + x_blue_2_u_0
+                                 + x_blue_2_u_2 + x_blue_2_u_4 + x_blue_2_u_5
+                                 + x_blue_2_u_6 >= 0
+ blue_l_u_neighborhood_of_square_2: - x_blue_1_l_2 + x_blue_2_u_1
+                                 + x_blue_2_u_3 + x_blue_2_u_5 + x_blue_2_u_6
+                                 + x_blue_2_u_7 >= 0
+ blue_l_u_neighborhood_of_square_3: - x_blue_1_l_3 + x_blue_2_u_2
+                                 + x_blue_2_u_6 + x_blue_2_u_7 >= 0
+ blue_l_u_neighborhood_of_square_4: - x_blue_1_l_4 + x_blue_2_u_0
+                                 + x_blue_2_u_1 + x_blue_2_u_5 + x_blue_2_u_8
+                                 + x_blue_2_u_9 >= 0
+ blue_l_u_neighborhood_of_square_5: - x_blue_1_l_5 + x_blue_2_u_0
+                                 + x_blue_2_u_1 + x_blue_2_u_2 + x_blue_2_u_4
+                                 + x_blue_2_u_6 + x_blue_2_u_8 + x_blue_2_u_9
+                                 + x_blue_2_u_10 >= 0
+ blue_l_u_neighborhood_of_square_6: - x_blue_1_l_6 + x_blue_2_u_1
+                                 + x_blue_2_u_2 + x_blue_2_u_3 + x_blue_2_u_5
+                                 + x_blue_2_u_7 + x_blue_2_u_9 + x_blue_2_u_10
+                                 + x_blue_2_u_11 >= 0
+ blue_l_u_neighborhood_of_square_7: - x_blue_1_l_7 + x_blue_2_u_2
+                                 + x_blue_2_u_3 + x_blue_2_u_6 + x_blue_2_u_10
+                                 + x_blue_2_u_11 >= 0
+ blue_l_u_neighborhood_of_square_8: - x_blue_1_l_8 + x_blue_2_u_4
+                                 + x_blue_2_u_5 + x_blue_2_u_9 + x_blue_2_u_12
+                                 + x_blue_2_u_13 >= 0
+ blue_l_u_neighborhood_of_square_9: - x_blue_1_l_9 + x_blue_2_u_4
+                                 + x_blue_2_u_5 + x_blue_2_u_6 + x_blue_2_u_8
+                                 + x_blue_2_u_10 + x_blue_2_u_12
+                                 + x_blue_2_u_13 + x_blue_2_u_14 >= 0
+ blue_l_u_neighborhood_of_square_10: - x_blue_1_l_10 + x_blue_2_u_5
+                                 + x_blue_2_u_6 + x_blue_2_u_7 + x_blue_2_u_9
+                                 + x_blue_2_u_11 + x_blue_2_u_13
+                                 + x_blue_2_u_14 + x_blue_2_u_15 >= 0
+ blue_l_u_neighborhood_of_square_11: - x_blue_1_l_11 + x_blue_2_u_6
+                                 + x_blue_2_u_7 + x_blue_2_u_10 + x_blue_2_u_14
+                                 + x_blue_2_u_15 >= 0
+ blue_l_u_neighborhood_of_square_12: - x_blue_1_l_12 + x_blue_2_u_8
+                                 + x_blue_2_u_9 + x_blue_2_u_13 >= 0
+ blue_l_u_neighborhood_of_square_13: - x_blue_1_l_13 + x_blue_2_u_8
+                                 + x_blue_2_u_9 + x_blue_2_u_10 + x_blue_2_u_12
+                                 + x_blue_2_u_14 >= 0
+ blue_l_u_neighborhood_of_square_14: - x_blue_1_l_14 + x_blue_2_u_9
+                                 + x_blue_2_u_10 + x_blue_2_u_11
+                                 + x_blue_2_u_13 + x_blue_2_u_15 >= 0
+ blue_l_u_neighborhood_of_square_15: - x_blue_1_l_15 + x_blue_2_u_10
+                                 + x_blue_2_u_11 + x_blue_2_u_14 >= 0
+ blue_u_e_neighborhood_of_square_0: - x_blue_2_u_0 + x_blue_3_e_1
+                                 + x_blue_3_e_4 + x_blue_3_e_5 >= 0
+ blue_u_e_neighborhood_of_square_1: - x_blue_2_u_1 + x_blue_3_e_0
+                                 + x_blue_3_e_2 + x_blue_3_e_4 + x_blue_3_e_5
+                                 + x_blue_3_e_6 >= 0
+ blue_u_e_neighborhood_of_square_2: - x_blue_2_u_2 + x_blue_3_e_1
+                                 + x_blue_3_e_3 + x_blue_3_e_5 + x_blue_3_e_6
+                                 + x_blue_3_e_7 >= 0
+ blue_u_e_neighborhood_of_square_3: - x_blue_2_u_3 + x_blue_3_e_2
+                                 + x_blue_3_e_6 + x_blue_3_e_7 >= 0
+ blue_u_e_neighborhood_of_square_4: - x_blue_2_u_4 + x_blue_3_e_0
+                                 + x_blue_3_e_1 + x_blue_3_e_5 + x_blue_3_e_8
+                                 + x_blue_3_e_9 >= 0
+ blue_u_e_neighborhood_of_square_5: - x_blue_2_u_5 + x_blue_3_e_0
+                                 + x_blue_3_e_1 + x_blue_3_e_2 + x_blue_3_e_4
+                                 + x_blue_3_e_6 + x_blue_3_e_8 + x_blue_3_e_9
+                                 + x_blue_3_e_10 >= 0
+ blue_u_e_neighborhood_of_square_6: - x_blue_2_u_6 + x_blue_3_e_1
+                                 + x_blue_3_e_2 + x_blue_3_e_3 + x_blue_3_e_5
+                                 + x_blue_3_e_7 + x_blue_3_e_9 + x_blue_3_e_10
+                                 + x_blue_3_e_11 >= 0
+ blue_u_e_neighborhood_of_square_7: - x_blue_2_u_7 + x_blue_3_e_2
+                                 + x_blue_3_e_3 + x_blue_3_e_6 + x_blue_3_e_10
+                                 + x_blue_3_e_11 >= 0
+ blue_u_e_neighborhood_of_square_8: - x_blue_2_u_8 + x_blue_3_e_4
+                                 + x_blue_3_e_5 + x_blue_3_e_9 + x_blue_3_e_12
+                                 + x_blue_3_e_13 >= 0
+ blue_u_e_neighborhood_of_square_9: - x_blue_2_u_9 + x_blue_3_e_4
+                                 + x_blue_3_e_5 + x_blue_3_e_6 + x_blue_3_e_8
+                                 + x_blue_3_e_10 + x_blue_3_e_12
+                                 + x_blue_3_e_13 + x_blue_3_e_14 >= 0
+ blue_u_e_neighborhood_of_square_10: - x_blue_2_u_10 + x_blue_3_e_5
+                                 + x_blue_3_e_6 + x_blue_3_e_7 + x_blue_3_e_9
+                                 + x_blue_3_e_11 + x_blue_3_e_13
+                                 + x_blue_3_e_14 + x_blue_3_e_15 >= 0
+ blue_u_e_neighborhood_of_square_11: - x_blue_2_u_11 + x_blue_3_e_6
+                                 + x_blue_3_e_7 + x_blue_3_e_10 + x_blue_3_e_14
+                                 + x_blue_3_e_15 >= 0
+ blue_u_e_neighborhood_of_square_12: - x_blue_2_u_12 + x_blue_3_e_8
+                                 + x_blue_3_e_9 + x_blue_3_e_13 >= 0
+ blue_u_e_neighborhood_of_square_13: - x_blue_2_u_13 + x_blue_3_e_8
+                                 + x_blue_3_e_9 + x_blue_3_e_10 + x_blue_3_e_12
+                                 + x_blue_3_e_14 >= 0
+ blue_u_e_neighborhood_of_square_14: - x_blue_2_u_14 + x_blue_3_e_9
+                                 + x_blue_3_e_10 + x_blue_3_e_11
+                                 + x_blue_3_e_13 + x_blue_3_e_15 >= 0
+ blue_u_e_neighborhood_of_square_15: - x_blue_2_u_15 + x_blue_3_e_10
+                                 + x_blue_3_e_11 + x_blue_3_e_14 >= 0
+ red_r_e_neighborhood_of_square_0: - x_red_0_r_0 + x_red_1_e_1 + x_red_1_e_4
+                                 + x_red_1_e_5 >= 0
+ red_r_e_neighborhood_of_square_1: - x_red_0_r_1 + x_red_1_e_0 + x_red_1_e_2
+                                 + x_red_1_e_4 + x_red_1_e_5 + x_red_1_e_6 >= 0
+ red_r_e_neighborhood_of_square_2: - x_red_0_r_2 + x_red_1_e_1 + x_red_1_e_3
+                                 + x_red_1_e_5 + x_red_1_e_6 + x_red_1_e_7 >= 0
+ red_r_e_neighborhood_of_square_3: - x_red_0_r_3 + x_red_1_e_2 + x_red_1_e_6
+                                 + x_red_1_e_7 >= 0
+ red_r_e_neighborhood_of_square_4: - x_red_0_r_4 + x_red_1_e_0 + x_red_1_e_1
+                                 + x_red_1_e_5 + x_red_1_e_8 + x_red_1_e_9 >= 0
+ red_r_e_neighborhood_of_square_5: - x_red_0_r_5 + x_red_1_e_0 + x_red_1_e_1
+                                 + x_red_1_e_2 + x_red_1_e_4 + x_red_1_e_6
+                                 + x_red_1_e_8 + x_red_1_e_9 + x_red_1_e_10
                                  >= 0
- square_s_q_square_2:            x_1_q - x_2_s + x_3_q + x_5_q + x_6_q + x_7_q
+ red_r_e_neighborhood_of_square_6: - x_red_0_r_6 + x_red_1_e_1 + x_red_1_e_2
+                                 + x_red_1_e_3 + x_red_1_e_5 + x_red_1_e_7
+                                 + x_red_1_e_9 + x_red_1_e_10 + x_red_1_e_11
                                  >= 0
- square_s_q_square_3:            x_2_q - x_3_s + x_6_q + x_7_q >= 0
- square_s_q_square_4:            x_0_q + x_1_q - x_4_s + x_5_q + x_8_q + x_9_q
+ red_r_e_neighborhood_of_square_7: - x_red_0_r_7 + x_red_1_e_2 + x_red_1_e_3
+                                 + x_red_1_e_6 + x_red_1_e_10 + x_red_1_e_11
                                  >= 0
- square_s_q_square_5:            x_0_q + x_1_q + x_2_q + x_4_q - x_5_s + x_6_q
-                                 + x_8_q + x_9_q + x_10_q >= 0
- square_s_q_square_6:            x_1_q + x_2_q + x_3_q + x_5_q - x_6_s + x_7_q
-                                 + x_9_q + x_10_q + x_11_q >= 0
- square_s_q_square_7:            x_2_q + x_3_q + x_6_q - x_7_s + x_10_q
-                                 + x_11_q >= 0
- square_s_q_square_8:            x_4_q + x_5_q - x_8_s + x_9_q + x_12_q
-                                 + x_13_q >= 0
- square_s_q_square_9:            x_4_q + x_5_q + x_6_q + x_8_q - x_9_s + x_10_q
-                                 + x_12_q + x_13_q + x_14_q >= 0
- square_s_q_square_10:           x_5_q + x_6_q + x_7_q + x_9_q - x_10_s
-                                 + x_11_q + x_13_q + x_14_q + x_15_q >= 0
- square_s_q_square_11:           x_6_q + x_7_q + x_10_q - x_11_s + x_14_q
-                                 + x_15_q >= 0
- square_s_q_square_12:           x_8_q + x_9_q - x_12_s + x_13_q >= 0
- square_s_q_square_13:           x_8_q + x_9_q + x_10_q + x_12_q - x_13_s
-                                 + x_14_q >= 0
- square_s_q_square_14:           x_9_q + x_10_q + x_11_q + x_13_q - x_14_s
-                                 + x_15_q >= 0
- square_s_q_square_15:           x_10_q + x_11_q + x_14_q - x_15_s >= 0
- square_q_u_square_0:            - x_0_q + x_1_u + x_4_u + x_5_u >= 0
- square_q_u_square_1:            x_0_u - x_1_q + x_2_u + x_4_u + x_5_u + x_6_u
+ red_r_e_neighborhood_of_square_8: - x_red_0_r_8 + x_red_1_e_4 + x_red_1_e_5
+                                 + x_red_1_e_9 + x_red_1_e_12 + x_red_1_e_13
                                  >= 0
- square_q_u_square_2:            x_1_u - x_2_q + x_3_u + x_5_u + x_6_u + x_7_u
+ red_r_e_neighborhood_of_square_9: - x_red_0_r_9 + x_red_1_e_4 + x_red_1_e_5
+                                 + x_red_1_e_6 + x_red_1_e_8 + x_red_1_e_10
+                                 + x_red_1_e_12 + x_red_1_e_13 + x_red_1_e_14
                                  >= 0
- square_q_u_square_3:            x_2_u - x_3_q + x_6_u + x_7_u >= 0
- square_q_u_square_4:            x_0_u + x_1_u - x_4_q + x_5_u + x_8_u + x_9_u
+ red_r_e_neighborhood_of_square_10: - x_red_0_r_10 + x_red_1_e_5 + x_red_1_e_6
+                                 + x_red_1_e_7 + x_red_1_e_9 + x_red_1_e_11
+                                 + x_red_1_e_13 + x_red_1_e_14 + x_red_1_e_15
                                  >= 0
- square_q_u_square_5:            x_0_u + x_1_u + x_2_u + x_4_u - x_5_q + x_6_u
-                                 + x_8_u + x_9_u + x_10_u >= 0
- square_q_u_square_6:            x_1_u + x_2_u + x_3_u + x_5_u - x_6_q + x_7_u
-                                 + x_9_u + x_10_u + x_11_u >= 0
- square_q_u_square_7:            x_2_u + x_3_u + x_6_u - x_7_q + x_10_u
-                                 + x_11_u >= 0
- square_q_u_square_8:            x_4_u + x_5_u - x_8_q + x_9_u + x_12_u
-                                 + x_13_u >= 0
- square_q_u_square_9:            x_4_u + x_5_u + x_6_u + x_8_u - x_9_q + x_10_u
-                                 + x_12_u + x_13_u + x_14_u >= 0
- square_q_u_square_10:           x_5_u + x_6_u + x_7_u + x_9_u - x_10_q
-                                 + x_11_u + x_13_u + x_14_u + x_15_u >= 0
- square_q_u_square_11:           x_6_u + x_7_u + x_10_u - x_11_q + x_14_u
-                                 + x_15_u >= 0
- square_q_u_square_12:           x_8_u + x_9_u - x_12_q + x_13_u >= 0
- square_q_u_square_13:           x_8_u + x_9_u + x_10_u + x_12_u - x_13_q
-                                 + x_14_u >= 0
- square_q_u_square_14:           x_9_u + x_10_u + x_11_u + x_13_u - x_14_q
-                                 + x_15_u >= 0
- square_q_u_square_15:           x_10_u + x_11_u + x_14_u - x_15_q >= 0
- square_u_a_square_0:            - x_0_u + x_1_a + x_4_a + x_5_a >= 0
- square_u_a_square_1:            x_0_a - x_1_u + x_2_a + x_4_a + x_5_a + x_6_a
+ red_r_e_neighborhood_of_square_11: - x_red_0_r_11 + x_red_1_e_6 + x_red_1_e_7
+                                 + x_red_1_e_10 + x_red_1_e_14 + x_red_1_e_15
                                  >= 0
- square_u_a_square_2:            x_1_a - x_2_u + x_3_a + x_5_a + x_6_a + x_7_a
+ red_r_e_neighborhood_of_square_12: - x_red_0_r_12 + x_red_1_e_8 + x_red_1_e_9
+                                 + x_red_1_e_13 >= 0
+ red_r_e_neighborhood_of_square_13: - x_red_0_r_13 + x_red_1_e_8 + x_red_1_e_9
+                                 + x_red_1_e_10 + x_red_1_e_12 + x_red_1_e_14
                                  >= 0
- square_u_a_square_3:            x_2_a - x_3_u + x_6_a + x_7_a >= 0
- square_u_a_square_4:            x_0_a + x_1_a - x_4_u + x_5_a + x_8_a + x_9_a
+ red_r_e_neighborhood_of_square_14: - x_red_0_r_14 + x_red_1_e_9 + x_red_1_e_10
+                                 + x_red_1_e_11 + x_red_1_e_13 + x_red_1_e_15
                                  >= 0
- square_u_a_square_5:            x_0_a + x_1_a + x_2_a + x_4_a - x_5_u + x_6_a
-                                 + x_8_a + x_9_a + x_10_a >= 0
- square_u_a_square_6:            x_1_a + x_2_a + x_3_a + x_5_a - x_6_u + x_7_a
-                                 + x_9_a + x_10_a + x_11_a >= 0
- square_u_a_square_7:            x_2_a + x_3_a + x_6_a - x_7_u + x_10_a
-                                 + x_11_a >= 0
- square_u_a_square_8:            x_4_a + x_5_a - x_8_u + x_9_a + x_12_a
-                                 + x_13_a >= 0
- square_u_a_square_9:            x_4_a + x_5_a + x_6_a + x_8_a - x_9_u + x_10_a
-                                 + x_12_a + x_13_a + x_14_a >= 0
- square_u_a_square_10:           x_5_a + x_6_a + x_7_a + x_9_a - x_10_u
-                                 + x_11_a + x_13_a + x_14_a + x_15_a >= 0
- square_u_a_square_11:           x_6_a + x_7_a + x_10_a - x_11_u + x_14_a
-                                 + x_15_a >= 0
- square_u_a_square_12:           x_8_a + x_9_a - x_12_u + x_13_a >= 0
- square_u_a_square_13:           x_8_a + x_9_a + x_10_a + x_12_a - x_13_u
-                                 + x_14_a >= 0
- square_u_a_square_14:           x_9_a + x_10_a + x_11_a + x_13_a - x_14_u
-                                 + x_15_a >= 0
- square_u_a_square_15:           x_10_a + x_11_a + x_14_a - x_15_u >= 0
- square_a_r_square_0:            - x_0_a + x_1_r + x_4_r + x_5_r >= 0
- square_a_r_square_1:            x_0_r - x_1_a + x_2_r + x_4_r + x_5_r + x_6_r
+ red_r_e_neighborhood_of_square_15: - x_red_0_r_15 + x_red_1_e_10
+                                 + x_red_1_e_11 + x_red_1_e_14 >= 0
+ red_e_d_neighborhood_of_square_0: - x_red_1_e_0 + x_red_2_d_1 + x_red_2_d_4
+                                 + x_red_2_d_5 >= 0
+ red_e_d_neighborhood_of_square_1: - x_red_1_e_1 + x_red_2_d_0 + x_red_2_d_2
+                                 + x_red_2_d_4 + x_red_2_d_5 + x_red_2_d_6 >= 0
+ red_e_d_neighborhood_of_square_2: - x_red_1_e_2 + x_red_2_d_1 + x_red_2_d_3
+                                 + x_red_2_d_5 + x_red_2_d_6 + x_red_2_d_7 >= 0
+ red_e_d_neighborhood_of_square_3: - x_red_1_e_3 + x_red_2_d_2 + x_red_2_d_6
+                                 + x_red_2_d_7 >= 0
+ red_e_d_neighborhood_of_square_4: - x_red_1_e_4 + x_red_2_d_0 + x_red_2_d_1
+                                 + x_red_2_d_5 + x_red_2_d_8 + x_red_2_d_9 >= 0
+ red_e_d_neighborhood_of_square_5: - x_red_1_e_5 + x_red_2_d_0 + x_red_2_d_1
+                                 + x_red_2_d_2 + x_red_2_d_4 + x_red_2_d_6
+                                 + x_red_2_d_8 + x_red_2_d_9 + x_red_2_d_10
                                  >= 0
- square_a_r_square_2:            x_1_r - x_2_a + x_3_r + x_5_r + x_6_r + x_7_r
+ red_e_d_neighborhood_of_square_6: - x_red_1_e_6 + x_red_2_d_1 + x_red_2_d_2
+                                 + x_red_2_d_3 + x_red_2_d_5 + x_red_2_d_7
+                                 + x_red_2_d_9 + x_red_2_d_10 + x_red_2_d_11
                                  >= 0
- square_a_r_square_3:            x_2_r - x_3_a + x_6_r + x_7_r >= 0
- square_a_r_square_4:            x_0_r + x_1_r - x_4_a + x_5_r + x_8_r + x_9_r
+ red_e_d_neighborhood_of_square_7: - x_red_1_e_7 + x_red_2_d_2 + x_red_2_d_3
+                                 + x_red_2_d_6 + x_red_2_d_10 + x_red_2_d_11
                                  >= 0
- square_a_r_square_5:            x_0_r + x_1_r + x_2_r + x_4_r - x_5_a + x_6_r
-                                 + x_8_r + x_9_r + x_10_r >= 0
- square_a_r_square_6:            x_1_r + x_2_r + x_3_r + x_5_r - x_6_a + x_7_r
-                                 + x_9_r + x_10_r + x_11_r >= 0
- square_a_r_square_7:            x_2_r + x_3_r + x_6_r - x_7_a + x_10_r
-                                 + x_11_r >= 0
- square_a_r_square_8:            x_4_r + x_5_r - x_8_a + x_9_r + x_12_r
-                                 + x_13_r >= 0
- square_a_r_square_9:            x_4_r + x_5_r + x_6_r + x_8_r - x_9_a + x_10_r
-                                 + x_12_r + x_13_r + x_14_r >= 0
- square_a_r_square_10:           x_5_r + x_6_r + x_7_r + x_9_r - x_10_a
-                                 + x_11_r + x_13_r + x_14_r + x_15_r >= 0
- square_a_r_square_11:           x_6_r + x_7_r + x_10_r - x_11_a + x_14_r
-                                 + x_15_r >= 0
- square_a_r_square_12:           x_8_r + x_9_r - x_12_a + x_13_r >= 0
- square_a_r_square_13:           x_8_r + x_9_r + x_10_r + x_12_r - x_13_a
-                                 + x_14_r >= 0
- square_a_r_square_14:           x_9_r + x_10_r + x_11_r + x_13_r - x_14_a
-                                 + x_15_r >= 0
- square_a_r_square_15:           x_10_r + x_11_r + x_14_r - x_15_a >= 0
- square_r_e_square_0:            - x_0_r + x_1_e + x_4_e + x_5_e >= 0
- square_r_e_square_1:            x_0_e - x_1_r + x_2_e + x_4_e + x_5_e + x_6_e
+ red_e_d_neighborhood_of_square_8: - x_red_1_e_8 + x_red_2_d_4 + x_red_2_d_5
+                                 + x_red_2_d_9 + x_red_2_d_12 + x_red_2_d_13
                                  >= 0
- square_r_e_square_2:            x_1_e - x_2_r + x_3_e + x_5_e + x_6_e + x_7_e
+ red_e_d_neighborhood_of_square_9: - x_red_1_e_9 + x_red_2_d_4 + x_red_2_d_5
+                                 + x_red_2_d_6 + x_red_2_d_8 + x_red_2_d_10
+                                 + x_red_2_d_12 + x_red_2_d_13 + x_red_2_d_14
                                  >= 0
- square_r_e_square_3:            x_2_e - x_3_r + x_6_e + x_7_e >= 0
- square_r_e_square_4:            x_0_e + x_1_e - x_4_r + x_5_e + x_8_e + x_9_e
+ red_e_d_neighborhood_of_square_10: - x_red_1_e_10 + x_red_2_d_5 + x_red_2_d_6
+                                 + x_red_2_d_7 + x_red_2_d_9 + x_red_2_d_11
+                                 + x_red_2_d_13 + x_red_2_d_14 + x_red_2_d_15
                                  >= 0
- square_r_e_square_5:            x_0_e + x_1_e + x_2_e + x_4_e - x_5_r + x_6_e
-                                 + x_8_e + x_9_e + x_10_e >= 0
- square_r_e_square_6:            x_1_e + x_2_e + x_3_e + x_5_e - x_6_r + x_7_e
-                                 + x_9_e + x_10_e + x_11_e >= 0
- square_r_e_square_7:            x_2_e + x_3_e + x_6_e - x_7_r + x_10_e
-                                 + x_11_e >= 0
- square_r_e_square_8:            x_4_e + x_5_e - x_8_r + x_9_e + x_12_e
-                                 + x_13_e >= 0
- square_r_e_square_9:            x_4_e + x_5_e + x_6_e + x_8_e - x_9_r + x_10_e
-                                 + x_12_e + x_13_e + x_14_e >= 0
- square_r_e_square_10:           x_5_e + x_6_e + x_7_e + x_9_e - x_10_r
-                                 + x_11_e + x_13_e + x_14_e + x_15_e >= 0
- square_r_e_square_11:           x_6_e + x_7_e + x_10_e - x_11_r + x_14_e
-                                 + x_15_e >= 0
- square_r_e_square_12:           x_8_e + x_9_e - x_12_r + x_13_e >= 0
- square_r_e_square_13:           x_8_e + x_9_e + x_10_e + x_12_e - x_13_r
-                                 + x_14_e >= 0
- square_r_e_square_14:           x_9_e + x_10_e + x_11_e + x_13_e - x_14_r
-                                 + x_15_e >= 0
- square_r_e_square_15:           x_10_e + x_11_e + x_14_e - x_15_r >= 0
- butt_b_u_square_0:              - x_0_b + x_1_u + x_4_u + x_5_u >= 0
- butt_b_u_square_1:              x_0_u - x_1_b + x_2_u + x_4_u + x_5_u + x_6_u
+ red_e_d_neighborhood_of_square_11: - x_red_1_e_11 + x_red_2_d_6 + x_red_2_d_7
+                                 + x_red_2_d_10 + x_red_2_d_14 + x_red_2_d_15
                                  >= 0
- butt_b_u_square_2:              x_1_u - x_2_b + x_3_u + x_5_u + x_6_u + x_7_u
+ red_e_d_neighborhood_of_square_12: - x_red_1_e_12 + x_red_2_d_8 + x_red_2_d_9
+                                 + x_red_2_d_13 >= 0
+ red_e_d_neighborhood_of_square_13: - x_red_1_e_13 + x_red_2_d_8 + x_red_2_d_9
+                                 + x_red_2_d_10 + x_red_2_d_12 + x_red_2_d_14
                                  >= 0
- butt_b_u_square_3:              x_2_u - x_3_b + x_6_u + x_7_u >= 0
- butt_b_u_square_4:              x_0_u + x_1_u - x_4_b + x_5_u + x_8_u + x_9_u
+ red_e_d_neighborhood_of_square_14: - x_red_1_e_14 + x_red_2_d_9 + x_red_2_d_10
+                                 + x_red_2_d_11 + x_red_2_d_13 + x_red_2_d_15
                                  >= 0
- butt_b_u_square_5:              x_0_u + x_1_u + x_2_u + x_4_u - x_5_b + x_6_u
-                                 + x_8_u + x_9_u + x_10_u >= 0
- butt_b_u_square_6:              x_1_u + x_2_u + x_3_u + x_5_u - x_6_b + x_7_u
-                                 + x_9_u + x_10_u + x_11_u >= 0
- butt_b_u_square_7:              x_2_u + x_3_u + x_6_u - x_7_b + x_10_u
-                                 + x_11_u >= 0
- butt_b_u_square_8:              x_4_u + x_5_u - x_8_b + x_9_u + x_12_u
-                                 + x_13_u >= 0
- butt_b_u_square_9:              x_4_u + x_5_u + x_6_u + x_8_u - x_9_b + x_10_u
-                                 + x_12_u + x_13_u + x_14_u >= 0
- butt_b_u_square_10:             x_5_u + x_6_u + x_7_u + x_9_u - x_10_b
-                                 + x_11_u + x_13_u + x_14_u + x_15_u >= 0
- butt_b_u_square_11:             x_6_u + x_7_u + x_10_u - x_11_b + x_14_u
-                                 + x_15_u >= 0
- butt_b_u_square_12:             x_8_u + x_9_u - x_12_b + x_13_u >= 0
- butt_b_u_square_13:             x_8_u + x_9_u + x_10_u + x_12_u - x_13_b
-                                 + x_14_u >= 0
- butt_b_u_square_14:             x_9_u + x_10_u + x_11_u + x_13_u - x_14_b
-                                 + x_15_u >= 0
- butt_b_u_square_15:             x_10_u + x_11_u + x_14_u - x_15_b >= 0
- butt_u_t_square_0:              - x_0_u + x_1_t + x_4_t + x_5_t >= 0
- butt_u_t_square_1:              x_0_t - x_1_u + x_2_t + x_4_t + x_5_t + x_6_t
-                                 >= 0
- butt_u_t_square_2:              x_1_t - x_2_u + x_3_t + x_5_t + x_6_t + x_7_t
-                                 >= 0
- butt_u_t_square_3:              x_2_t - x_3_u + x_6_t + x_7_t >= 0
- butt_u_t_square_4:              x_0_t + x_1_t - x_4_u + x_5_t + x_8_t + x_9_t
-                                 >= 0
- butt_u_t_square_5:              x_0_t + x_1_t + x_2_t + x_4_t - x_5_u + x_6_t
-                                 + x_8_t + x_9_t + x_10_t >= 0
- butt_u_t_square_6:              x_1_t + x_2_t + x_3_t + x_5_t - x_6_u + x_7_t
-                                 + x_9_t + x_10_t + x_11_t >= 0
- butt_u_t_square_7:              x_2_t + x_3_t + x_6_t - x_7_u + x_10_t
-                                 + x_11_t >= 0
- butt_u_t_square_8:              x_4_t + x_5_t - x_8_u + x_9_t + x_12_t
-                                 + x_13_t >= 0
- butt_u_t_square_9:              x_4_t + x_5_t + x_6_t + x_8_t - x_9_u + x_10_t
-                                 + x_12_t + x_13_t + x_14_t >= 0
- butt_u_t_square_10:             x_5_t + x_6_t + x_7_t + x_9_t - x_10_u
-                                 + x_11_t + x_13_t + x_14_t + x_15_t >= 0
- butt_u_t_square_11:             x_6_t + x_7_t + x_10_t - x_11_u + x_14_t
-                                 + x_15_t >= 0
- butt_u_t_square_12:             x_8_t + x_9_t - x_12_u + x_13_t >= 0
- butt_u_t_square_13:             x_8_t + x_9_t + x_10_t + x_12_t - x_13_u
-                                 + x_14_t >= 0
- butt_u_t_square_14:             x_9_t + x_10_t + x_11_t + x_13_t - x_14_u
-                                 + x_15_t >= 0
- butt_u_t_square_15:             x_10_t + x_11_t + x_14_t - x_15_u >= 0
- butt_t_t_square_0:              - x_0_t + x_1_t + x_4_t + x_5_t >= 0
- butt_t_t_square_1:              x_0_t - x_1_t + x_2_t + x_4_t + x_5_t + x_6_t
-                                 >= 0
- butt_t_t_square_2:              x_1_t - x_2_t + x_3_t + x_5_t + x_6_t + x_7_t
-                                 >= 0
- butt_t_t_square_3:              x_2_t - x_3_t + x_6_t + x_7_t >= 0
- butt_t_t_square_4:              x_0_t + x_1_t - x_4_t + x_5_t + x_8_t + x_9_t
-                                 >= 0
- butt_t_t_square_5:              x_0_t + x_1_t + x_2_t + x_4_t - x_5_t + x_6_t
-                                 + x_8_t + x_9_t + x_10_t >= 0
- butt_t_t_square_6:              x_1_t + x_2_t + x_3_t + x_5_t - x_6_t + x_7_t
-                                 + x_9_t + x_10_t + x_11_t >= 0
- butt_t_t_square_7:              x_2_t + x_3_t + x_6_t - x_7_t + x_10_t
-                                 + x_11_t >= 0
- butt_t_t_square_8:              x_4_t + x_5_t - x_8_t + x_9_t + x_12_t
-                                 + x_13_t >= 0
- butt_t_t_square_9:              x_4_t + x_5_t + x_6_t + x_8_t - x_9_t + x_10_t
-                                 + x_12_t + x_13_t + x_14_t >= 0
- butt_t_t_square_10:             x_5_t + x_6_t + x_7_t + x_9_t - x_10_t
-                                 + x_11_t + x_13_t + x_14_t + x_15_t >= 0
- butt_t_t_square_11:             x_6_t + x_7_t + x_10_t - x_11_t + x_14_t
-                                 + x_15_t >= 0
- butt_t_t_square_12:             x_8_t + x_9_t - x_12_t + x_13_t >= 0
- butt_t_t_square_13:             x_8_t + x_9_t + x_10_t + x_12_t - x_13_t
-                                 + x_14_t >= 0
- butt_t_t_square_14:             x_9_t + x_10_t + x_11_t + x_13_t - x_14_t
-                                 + x_15_t >= 0
- butt_t_t_square_15:             x_10_t + x_11_t + x_14_t - x_15_t >= 0
- hole_h_o_square_0:              - x_0_h + x_1_o + x_4_o + x_5_o >= 0
- hole_h_o_square_1:              x_0_o - x_1_h + x_2_o + x_4_o + x_5_o + x_6_o
-                                 >= 0
- hole_h_o_square_2:              x_1_o - x_2_h + x_3_o + x_5_o + x_6_o + x_7_o
-                                 >= 0
- hole_h_o_square_3:              x_2_o - x_3_h + x_6_o + x_7_o >= 0
- hole_h_o_square_4:              x_0_o + x_1_o - x_4_h + x_5_o + x_8_o + x_9_o
-                                 >= 0
- hole_h_o_square_5:              x_0_o + x_1_o + x_2_o + x_4_o - x_5_h + x_6_o
-                                 + x_8_o + x_9_o + x_10_o >= 0
- hole_h_o_square_6:              x_1_o + x_2_o + x_3_o + x_5_o - x_6_h + x_7_o
-                                 + x_9_o + x_10_o + x_11_o >= 0
- hole_h_o_square_7:              x_2_o + x_3_o + x_6_o - x_7_h + x_10_o
-                                 + x_11_o >= 0
- hole_h_o_square_8:              x_4_o + x_5_o - x_8_h + x_9_o + x_12_o
-                                 + x_13_o >= 0
- hole_h_o_square_9:              x_4_o + x_5_o + x_6_o + x_8_o - x_9_h + x_10_o
-                                 + x_12_o + x_13_o + x_14_o >= 0
- hole_h_o_square_10:             x_5_o + x_6_o + x_7_o + x_9_o - x_10_h
-                                 + x_11_o + x_13_o + x_14_o + x_15_o >= 0
- hole_h_o_square_11:             x_6_o + x_7_o + x_10_o - x_11_h + x_14_o
-                                 + x_15_o >= 0
- hole_h_o_square_12:             x_8_o + x_9_o - x_12_h + x_13_o >= 0
- hole_h_o_square_13:             x_8_o + x_9_o + x_10_o + x_12_o - x_13_h
-                                 + x_14_o >= 0
- hole_h_o_square_14:             x_9_o + x_10_o + x_11_o + x_13_o - x_14_h
-                                 + x_15_o >= 0
- hole_h_o_square_15:             x_10_o + x_11_o + x_14_o - x_15_h >= 0
- hole_o_l_square_0:              - x_0_o + x_1_l + x_4_l + x_5_l >= 0
- hole_o_l_square_1:              x_0_l - x_1_o + x_2_l + x_4_l + x_5_l + x_6_l
-                                 >= 0
- hole_o_l_square_2:              x_1_l - x_2_o + x_3_l + x_5_l + x_6_l + x_7_l
-                                 >= 0
- hole_o_l_square_3:              x_2_l - x_3_o + x_6_l + x_7_l >= 0
- hole_o_l_square_4:              x_0_l + x_1_l - x_4_o + x_5_l + x_8_l + x_9_l
-                                 >= 0
- hole_o_l_square_5:              x_0_l + x_1_l + x_2_l + x_4_l - x_5_o + x_6_l
-                                 + x_8_l + x_9_l + x_10_l >= 0
- hole_o_l_square_6:              x_1_l + x_2_l + x_3_l + x_5_l - x_6_o + x_7_l
-                                 + x_9_l + x_10_l + x_11_l >= 0
- hole_o_l_square_7:              x_2_l + x_3_l + x_6_l - x_7_o + x_10_l
-                                 + x_11_l >= 0
- hole_o_l_square_8:              x_4_l + x_5_l - x_8_o + x_9_l + x_12_l
-                                 + x_13_l >= 0
- hole_o_l_square_9:              x_4_l + x_5_l + x_6_l + x_8_l - x_9_o + x_10_l
-                                 + x_12_l + x_13_l + x_14_l >= 0
- hole_o_l_square_10:             x_5_l + x_6_l + x_7_l + x_9_l - x_10_o
-                                 + x_11_l + x_13_l + x_14_l + x_15_l >= 0
- hole_o_l_square_11:             x_6_l + x_7_l + x_10_l - x_11_o + x_14_l
-                                 + x_15_l >= 0
- hole_o_l_square_12:             x_8_l + x_9_l - x_12_o + x_13_l >= 0
- hole_o_l_square_13:             x_8_l + x_9_l + x_10_l + x_12_l - x_13_o
-                                 + x_14_l >= 0
- hole_o_l_square_14:             x_9_l + x_10_l + x_11_l + x_13_l - x_14_o
-                                 + x_15_l >= 0
- hole_o_l_square_15:             x_10_l + x_11_l + x_14_l - x_15_o >= 0
- hole_l_e_square_0:              - x_0_l + x_1_e + x_4_e + x_5_e >= 0
- hole_l_e_square_1:              x_0_e - x_1_l + x_2_e + x_4_e + x_5_e + x_6_e
-                                 >= 0
- hole_l_e_square_2:              x_1_e - x_2_l + x_3_e + x_5_e + x_6_e + x_7_e
-                                 >= 0
- hole_l_e_square_3:              x_2_e - x_3_l + x_6_e + x_7_e >= 0
- hole_l_e_square_4:              x_0_e + x_1_e - x_4_l + x_5_e + x_8_e + x_9_e
-                                 >= 0
- hole_l_e_square_5:              x_0_e + x_1_e + x_2_e + x_4_e - x_5_l + x_6_e
-                                 + x_8_e + x_9_e + x_10_e >= 0
- hole_l_e_square_6:              x_1_e + x_2_e + x_3_e + x_5_e - x_6_l + x_7_e
-                                 + x_9_e + x_10_e + x_11_e >= 0
- hole_l_e_square_7:              x_2_e + x_3_e + x_6_e - x_7_l + x_10_e
-                                 + x_11_e >= 0
- hole_l_e_square_8:              x_4_e + x_5_e - x_8_l + x_9_e + x_12_e
-                                 + x_13_e >= 0
- hole_l_e_square_9:              x_4_e + x_5_e + x_6_e + x_8_e - x_9_l + x_10_e
-                                 + x_12_e + x_13_e + x_14_e >= 0
- hole_l_e_square_10:             x_5_e + x_6_e + x_7_e + x_9_e - x_10_l
-                                 + x_11_e + x_13_e + x_14_e + x_15_e >= 0
- hole_l_e_square_11:             x_6_e + x_7_e + x_10_e - x_11_l + x_14_e
-                                 + x_15_e >= 0
- hole_l_e_square_12:             x_8_e + x_9_e - x_12_l + x_13_e >= 0
- hole_l_e_square_13:             x_8_e + x_9_e + x_10_e + x_12_e - x_13_l
-                                 + x_14_e >= 0
- hole_l_e_square_14:             x_9_e + x_10_e + x_11_e + x_13_e - x_14_l
-                                 + x_15_e >= 0
- hole_l_e_square_15:             x_10_e + x_11_e + x_14_e - x_15_l >= 0
+ red_e_d_neighborhood_of_square_15: - x_red_1_e_15 + x_red_2_d_10
+                                 + x_red_2_d_11 + x_red_2_d_14 >= 0
 Bounds
- 0 <= x_0_X <= 1
- 0 <= x_0_s <= 1
- 0 <= x_0_q <= 1
- 0 <= x_0_u <= 1
- 0 <= x_0_a <= 1
- 0 <= x_0_r <= 1
- 0 <= x_0_e <= 1
- 0 <= x_0_b <= 1
- 0 <= x_0_t <= 1
- 0 <= x_0_h <= 1
- 0 <= x_0_o <= 1
- 0 <= x_0_l <= 1
- 0 <= x_1_X <= 1
- 0 <= x_1_s <= 1
- 0 <= x_1_q <= 1
- 0 <= x_1_u <= 1
- 0 <= x_1_a <= 1
- 0 <= x_1_r <= 1
- 0 <= x_1_e <= 1
- 0 <= x_1_b <= 1
- 0 <= x_1_t <= 1
- 0 <= x_1_h <= 1
- 0 <= x_1_o <= 1
- 0 <= x_1_l <= 1
- 0 <= x_2_X <= 1
- 0 <= x_2_s <= 1
- 0 <= x_2_q <= 1
- 0 <= x_2_u <= 1
- 0 <= x_2_a <= 1
- 0 <= x_2_r <= 1
- 0 <= x_2_e <= 1
- 0 <= x_2_b <= 1
- 0 <= x_2_t <= 1
- 0 <= x_2_h <= 1
- 0 <= x_2_o <= 1
- 0 <= x_2_l <= 1
- 0 <= x_3_X <= 1
- 0 <= x_3_s <= 1
- 0 <= x_3_q <= 1
- 0 <= x_3_u <= 1
- 0 <= x_3_a <= 1
- 0 <= x_3_r <= 1
- 0 <= x_3_e <= 1
- 0 <= x_3_b <= 1
- 0 <= x_3_t <= 1
- 0 <= x_3_h <= 1
- 0 <= x_3_o <= 1
- 0 <= x_3_l <= 1
- 0 <= x_4_X <= 1
- 0 <= x_4_s <= 1
- 0 <= x_4_q <= 1
- 0 <= x_4_u <= 1
- 0 <= x_4_a <= 1
- 0 <= x_4_r <= 1
- 0 <= x_4_e <= 1
- 0 <= x_4_b <= 1
- 0 <= x_4_t <= 1
- 0 <= x_4_h <= 1
- 0 <= x_4_o <= 1
- 0 <= x_4_l <= 1
- 0 <= x_5_X <= 1
- 0 <= x_5_s <= 1
- 0 <= x_5_q <= 1
- 0 <= x_5_u <= 1
- 0 <= x_5_a <= 1
- 0 <= x_5_r <= 1
- 0 <= x_5_e <= 1
- 0 <= x_5_b <= 1
- 0 <= x_5_t <= 1
- 0 <= x_5_h <= 1
- 0 <= x_5_o <= 1
- 0 <= x_5_l <= 1
- 0 <= x_6_X <= 1
- 0 <= x_6_s <= 1
- 0 <= x_6_q <= 1
- 0 <= x_6_u <= 1
- 0 <= x_6_a <= 1
- 0 <= x_6_r <= 1
- 0 <= x_6_e <= 1
- 0 <= x_6_b <= 1
- 0 <= x_6_t <= 1
- 0 <= x_6_h <= 1
- 0 <= x_6_o <= 1
- 0 <= x_6_l <= 1
- 0 <= x_7_X <= 1
- 0 <= x_7_s <= 1
- 0 <= x_7_q <= 1
- 0 <= x_7_u <= 1
- 0 <= x_7_a <= 1
- 0 <= x_7_r <= 1
- 0 <= x_7_e <= 1
- 0 <= x_7_b <= 1
- 0 <= x_7_t <= 1
- 0 <= x_7_h <= 1
- 0 <= x_7_o <= 1
- 0 <= x_7_l <= 1
- 0 <= x_8_X <= 1
- 0 <= x_8_s <= 1
- 0 <= x_8_q <= 1
- 0 <= x_8_u <= 1
- 0 <= x_8_a <= 1
- 0 <= x_8_r <= 1
- 0 <= x_8_e <= 1
- 0 <= x_8_b <= 1
- 0 <= x_8_t <= 1
- 0 <= x_8_h <= 1
- 0 <= x_8_o <= 1
- 0 <= x_8_l <= 1
- 0 <= x_9_X <= 1
- 0 <= x_9_s <= 1
- 0 <= x_9_q <= 1
- 0 <= x_9_u <= 1
- 0 <= x_9_a <= 1
- 0 <= x_9_r <= 1
- 0 <= x_9_e <= 1
- 0 <= x_9_b <= 1
- 0 <= x_9_t <= 1
- 0 <= x_9_h <= 1
- 0 <= x_9_o <= 1
- 0 <= x_9_l <= 1
- 0 <= x_10_X <= 1
- 0 <= x_10_s <= 1
- 0 <= x_10_q <= 1
- 0 <= x_10_u <= 1
- 0 <= x_10_a <= 1
- 0 <= x_10_r <= 1
- 0 <= x_10_e <= 1
- 0 <= x_10_b <= 1
- 0 <= x_10_t <= 1
- 0 <= x_10_h <= 1
- 0 <= x_10_o <= 1
- 0 <= x_10_l <= 1
- 0 <= x_11_X <= 1
- 0 <= x_11_s <= 1
- 0 <= x_11_q <= 1
- 0 <= x_11_u <= 1
- 0 <= x_11_a <= 1
- 0 <= x_11_r <= 1
- 0 <= x_11_e <= 1
- 0 <= x_11_b <= 1
- 0 <= x_11_t <= 1
- 0 <= x_11_h <= 1
- 0 <= x_11_o <= 1
- 0 <= x_11_l <= 1
- 0 <= x_12_X <= 1
- 0 <= x_12_s <= 1
- 0 <= x_12_q <= 1
- 0 <= x_12_u <= 1
- 0 <= x_12_a <= 1
- 0 <= x_12_r <= 1
- 0 <= x_12_e <= 1
- 0 <= x_12_b <= 1
- 0 <= x_12_t <= 1
- 0 <= x_12_h <= 1
- 0 <= x_12_o <= 1
- 0 <= x_12_l <= 1
- 0 <= x_13_X <= 1
- 0 <= x_13_s <= 1
- 0 <= x_13_q <= 1
- 0 <= x_13_u <= 1
- 0 <= x_13_a <= 1
- 0 <= x_13_r <= 1
- 0 <= x_13_e <= 1
- 0 <= x_13_b <= 1
- 0 <= x_13_t <= 1
- 0 <= x_13_h <= 1
- 0 <= x_13_o <= 1
- 0 <= x_13_l <= 1
- 0 <= x_14_X <= 1
- 0 <= x_14_s <= 1
- 0 <= x_14_q <= 1
- 0 <= x_14_u <= 1
- 0 <= x_14_a <= 1
- 0 <= x_14_r <= 1
- 0 <= x_14_e <= 1
- 0 <= x_14_b <= 1
- 0 <= x_14_t <= 1
- 0 <= x_14_h <= 1
- 0 <= x_14_o <= 1
- 0 <= x_14_l <= 1
- 0 <= x_15_X <= 1
- 0 <= x_15_s <= 1
- 0 <= x_15_q <= 1
- 0 <= x_15_u <= 1
- 0 <= x_15_a <= 1
- 0 <= x_15_r <= 1
- 0 <= x_15_e <= 1
- 0 <= x_15_b <= 1
- 0 <= x_15_t <= 1
- 0 <= x_15_h <= 1
- 0 <= x_15_o <= 1
- 0 <= x_15_l <= 1
+ 0 <= y_0 <= 1
+ 0 <= y_1 <= 1
+ 0 <= y_2 <= 1
+ 0 <= y_3 <= 1
+ 0 <= y_4 <= 1
+ 0 <= y_5 <= 1
+ 0 <= y_6 <= 1
+ 0 <= y_7 <= 1
+ 0 <= y_8 <= 1
+ 0 <= y_9 <= 1
+ 0 <= y_10 <= 1
+ 0 <= y_11 <= 1
+ 0 <= y_12 <= 1
+ 0 <= y_13 <= 1
+ 0 <= y_14 <= 1
+ 0 <= y_15 <= 1
+ 0 <= x_gold_0_g_0 <= 1
+ 0 <= x_gold_0_g_1 <= 1
+ 0 <= x_gold_0_g_2 <= 1
+ 0 <= x_gold_0_g_3 <= 1
+ 0 <= x_gold_0_g_4 <= 1
+ 0 <= x_gold_0_g_5 <= 1
+ 0 <= x_gold_0_g_6 <= 1
+ 0 <= x_gold_0_g_7 <= 1
+ 0 <= x_gold_0_g_8 <= 1
+ 0 <= x_gold_0_g_9 <= 1
+ 0 <= x_gold_0_g_10 <= 1
+ 0 <= x_gold_0_g_11 <= 1
+ 0 <= x_gold_0_g_12 <= 1
+ 0 <= x_gold_0_g_13 <= 1
+ 0 <= x_gold_0_g_14 <= 1
+ 0 <= x_gold_0_g_15 <= 1
+ 0 <= x_gold_1_o_0 <= 1
+ 0 <= x_gold_1_o_1 <= 1
+ 0 <= x_gold_1_o_2 <= 1
+ 0 <= x_gold_1_o_3 <= 1
+ 0 <= x_gold_1_o_4 <= 1
+ 0 <= x_gold_1_o_5 <= 1
+ 0 <= x_gold_1_o_6 <= 1
+ 0 <= x_gold_1_o_7 <= 1
+ 0 <= x_gold_1_o_8 <= 1
+ 0 <= x_gold_1_o_9 <= 1
+ 0 <= x_gold_1_o_10 <= 1
+ 0 <= x_gold_1_o_11 <= 1
+ 0 <= x_gold_1_o_12 <= 1
+ 0 <= x_gold_1_o_13 <= 1
+ 0 <= x_gold_1_o_14 <= 1
+ 0 <= x_gold_1_o_15 <= 1
+ 0 <= x_gold_2_l_0 <= 1
+ 0 <= x_gold_2_l_1 <= 1
+ 0 <= x_gold_2_l_2 <= 1
+ 0 <= x_gold_2_l_3 <= 1
+ 0 <= x_gold_2_l_4 <= 1
+ 0 <= x_gold_2_l_5 <= 1
+ 0 <= x_gold_2_l_6 <= 1
+ 0 <= x_gold_2_l_7 <= 1
+ 0 <= x_gold_2_l_8 <= 1
+ 0 <= x_gold_2_l_9 <= 1
+ 0 <= x_gold_2_l_10 <= 1
+ 0 <= x_gold_2_l_11 <= 1
+ 0 <= x_gold_2_l_12 <= 1
+ 0 <= x_gold_2_l_13 <= 1
+ 0 <= x_gold_2_l_14 <= 1
+ 0 <= x_gold_2_l_15 <= 1
+ 0 <= x_gold_3_d_0 <= 1
+ 0 <= x_gold_3_d_1 <= 1
+ 0 <= x_gold_3_d_2 <= 1
+ 0 <= x_gold_3_d_3 <= 1
+ 0 <= x_gold_3_d_4 <= 1
+ 0 <= x_gold_3_d_5 <= 1
+ 0 <= x_gold_3_d_6 <= 1
+ 0 <= x_gold_3_d_7 <= 1
+ 0 <= x_gold_3_d_8 <= 1
+ 0 <= x_gold_3_d_9 <= 1
+ 0 <= x_gold_3_d_10 <= 1
+ 0 <= x_gold_3_d_11 <= 1
+ 0 <= x_gold_3_d_12 <= 1
+ 0 <= x_gold_3_d_13 <= 1
+ 0 <= x_gold_3_d_14 <= 1
+ 0 <= x_gold_3_d_15 <= 1
+ 0 <= x_blue_0_b_0 <= 1
+ 0 <= x_blue_0_b_1 <= 1
+ 0 <= x_blue_0_b_2 <= 1
+ 0 <= x_blue_0_b_3 <= 1
+ 0 <= x_blue_0_b_4 <= 1
+ 0 <= x_blue_0_b_5 <= 1
+ 0 <= x_blue_0_b_6 <= 1
+ 0 <= x_blue_0_b_7 <= 1
+ 0 <= x_blue_0_b_8 <= 1
+ 0 <= x_blue_0_b_9 <= 1
+ 0 <= x_blue_0_b_10 <= 1
+ 0 <= x_blue_0_b_11 <= 1
+ 0 <= x_blue_0_b_12 <= 1
+ 0 <= x_blue_0_b_13 <= 1
+ 0 <= x_blue_0_b_14 <= 1
+ 0 <= x_blue_0_b_15 <= 1
+ 0 <= x_blue_1_l_0 <= 1
+ 0 <= x_blue_1_l_1 <= 1
+ 0 <= x_blue_1_l_2 <= 1
+ 0 <= x_blue_1_l_3 <= 1
+ 0 <= x_blue_1_l_4 <= 1
+ 0 <= x_blue_1_l_5 <= 1
+ 0 <= x_blue_1_l_6 <= 1
+ 0 <= x_blue_1_l_7 <= 1
+ 0 <= x_blue_1_l_8 <= 1
+ 0 <= x_blue_1_l_9 <= 1
+ 0 <= x_blue_1_l_10 <= 1
+ 0 <= x_blue_1_l_11 <= 1
+ 0 <= x_blue_1_l_12 <= 1
+ 0 <= x_blue_1_l_13 <= 1
+ 0 <= x_blue_1_l_14 <= 1
+ 0 <= x_blue_1_l_15 <= 1
+ 0 <= x_blue_2_u_0 <= 1
+ 0 <= x_blue_2_u_1 <= 1
+ 0 <= x_blue_2_u_2 <= 1
+ 0 <= x_blue_2_u_3 <= 1
+ 0 <= x_blue_2_u_4 <= 1
+ 0 <= x_blue_2_u_5 <= 1
+ 0 <= x_blue_2_u_6 <= 1
+ 0 <= x_blue_2_u_7 <= 1
+ 0 <= x_blue_2_u_8 <= 1
+ 0 <= x_blue_2_u_9 <= 1
+ 0 <= x_blue_2_u_10 <= 1
+ 0 <= x_blue_2_u_11 <= 1
+ 0 <= x_blue_2_u_12 <= 1
+ 0 <= x_blue_2_u_13 <= 1
+ 0 <= x_blue_2_u_14 <= 1
+ 0 <= x_blue_2_u_15 <= 1
+ 0 <= x_blue_3_e_0 <= 1
+ 0 <= x_blue_3_e_1 <= 1
+ 0 <= x_blue_3_e_2 <= 1
+ 0 <= x_blue_3_e_3 <= 1
+ 0 <= x_blue_3_e_4 <= 1
+ 0 <= x_blue_3_e_5 <= 1
+ 0 <= x_blue_3_e_6 <= 1
+ 0 <= x_blue_3_e_7 <= 1
+ 0 <= x_blue_3_e_8 <= 1
+ 0 <= x_blue_3_e_9 <= 1
+ 0 <= x_blue_3_e_10 <= 1
+ 0 <= x_blue_3_e_11 <= 1
+ 0 <= x_blue_3_e_12 <= 1
+ 0 <= x_blue_3_e_13 <= 1
+ 0 <= x_blue_3_e_14 <= 1
+ 0 <= x_blue_3_e_15 <= 1
+ 0 <= x_red_0_r_0 <= 1
+ 0 <= x_red_0_r_1 <= 1
+ 0 <= x_red_0_r_2 <= 1
+ 0 <= x_red_0_r_3 <= 1
+ 0 <= x_red_0_r_4 <= 1
+ 0 <= x_red_0_r_5 <= 1
+ 0 <= x_red_0_r_6 <= 1
+ 0 <= x_red_0_r_7 <= 1
+ 0 <= x_red_0_r_8 <= 1
+ 0 <= x_red_0_r_9 <= 1
+ 0 <= x_red_0_r_10 <= 1
+ 0 <= x_red_0_r_11 <= 1
+ 0 <= x_red_0_r_12 <= 1
+ 0 <= x_red_0_r_13 <= 1
+ 0 <= x_red_0_r_14 <= 1
+ 0 <= x_red_0_r_15 <= 1
+ 0 <= x_red_1_e_0 <= 1
+ 0 <= x_red_1_e_1 <= 1
+ 0 <= x_red_1_e_2 <= 1
+ 0 <= x_red_1_e_3 <= 1
+ 0 <= x_red_1_e_4 <= 1
+ 0 <= x_red_1_e_5 <= 1
+ 0 <= x_red_1_e_6 <= 1
+ 0 <= x_red_1_e_7 <= 1
+ 0 <= x_red_1_e_8 <= 1
+ 0 <= x_red_1_e_9 <= 1
+ 0 <= x_red_1_e_10 <= 1
+ 0 <= x_red_1_e_11 <= 1
+ 0 <= x_red_1_e_12 <= 1
+ 0 <= x_red_1_e_13 <= 1
+ 0 <= x_red_1_e_14 <= 1
+ 0 <= x_red_1_e_15 <= 1
+ 0 <= x_red_2_d_0 <= 1
+ 0 <= x_red_2_d_1 <= 1
+ 0 <= x_red_2_d_2 <= 1
+ 0 <= x_red_2_d_3 <= 1
+ 0 <= x_red_2_d_4 <= 1
+ 0 <= x_red_2_d_5 <= 1
+ 0 <= x_red_2_d_6 <= 1
+ 0 <= x_red_2_d_7 <= 1
+ 0 <= x_red_2_d_8 <= 1
+ 0 <= x_red_2_d_9 <= 1
+ 0 <= x_red_2_d_10 <= 1
+ 0 <= x_red_2_d_11 <= 1
+ 0 <= x_red_2_d_12 <= 1
+ 0 <= x_red_2_d_13 <= 1
+ 0 <= x_red_2_d_14 <= 1
+ 0 <= x_red_2_d_15 <= 1
 Binaries
- x_0_X  x_0_s  x_0_q  x_0_u  x_0_a  x_0_r  x_0_e  x_0_b  x_0_t  x_0_h  x_0_o 
- x_0_l  x_1_X  x_1_s  x_1_q  x_1_u  x_1_a  x_1_r  x_1_e  x_1_b  x_1_t  x_1_h 
- x_1_o  x_1_l  x_2_X  x_2_s  x_2_q  x_2_u  x_2_a  x_2_r  x_2_e  x_2_b  x_2_t 
- x_2_h  x_2_o  x_2_l  x_3_X  x_3_s  x_3_q  x_3_u  x_3_a  x_3_r  x_3_e  x_3_b 
- x_3_t  x_3_h  x_3_o  x_3_l  x_4_X  x_4_s  x_4_q  x_4_u  x_4_a  x_4_r  x_4_e 
- x_4_b  x_4_t  x_4_h  x_4_o  x_4_l  x_5_X  x_5_s  x_5_q  x_5_u  x_5_a  x_5_r 
- x_5_e  x_5_b  x_5_t  x_5_h  x_5_o  x_5_l  x_6_X  x_6_s  x_6_q  x_6_u  x_6_a 
- x_6_r  x_6_e  x_6_b  x_6_t  x_6_h  x_6_o  x_6_l  x_7_X  x_7_s  x_7_q  x_7_u 
- x_7_a  x_7_r  x_7_e  x_7_b  x_7_t  x_7_h  x_7_o  x_7_l  x_8_X  x_8_s  x_8_q 
- x_8_u  x_8_a  x_8_r  x_8_e  x_8_b  x_8_t  x_8_h  x_8_o  x_8_l  x_9_X  x_9_s 
- x_9_q  x_9_u  x_9_a  x_9_r  x_9_e  x_9_b  x_9_t  x_9_h  x_9_o  x_9_l  x_10_X 
- x_10_s  x_10_q  x_10_u  x_10_a  x_10_r  x_10_e  x_10_b  x_10_t  x_10_h 
- x_10_o  x_10_l  x_11_X  x_11_s  x_11_q  x_11_u  x_11_a  x_11_r  x_11_e 
- x_11_b  x_11_t  x_11_h  x_11_o  x_11_l  x_12_X  x_12_s  x_12_q  x_12_u 
- x_12_a  x_12_r  x_12_e  x_12_b  x_12_t  x_12_h  x_12_o  x_12_l  x_13_X 
- x_13_s  x_13_q  x_13_u  x_13_a  x_13_r  x_13_e  x_13_b  x_13_t  x_13_h 
- x_13_o  x_13_l  x_14_X  x_14_s  x_14_q  x_14_u  x_14_a  x_14_r  x_14_e 
- x_14_b  x_14_t  x_14_h  x_14_o  x_14_l  x_15_X  x_15_s  x_15_q  x_15_u 
- x_15_a  x_15_r  x_15_e  x_15_b  x_15_t  x_15_h  x_15_o  x_15_l 
+ y_0  y_1  y_2  y_3  y_4  y_5  y_6  y_7  y_8  y_9  y_10  y_11  y_12  y_13 
+ y_14  y_15  x_gold_0_g_0  x_gold_0_g_1  x_gold_0_g_2  x_gold_0_g_3 
+ x_gold_0_g_4  x_gold_0_g_5  x_gold_0_g_6  x_gold_0_g_7  x_gold_0_g_8 
+ x_gold_0_g_9  x_gold_0_g_10  x_gold_0_g_11  x_gold_0_g_12  x_gold_0_g_13 
+ x_gold_0_g_14  x_gold_0_g_15  x_gold_1_o_0  x_gold_1_o_1  x_gold_1_o_2 
+ x_gold_1_o_3  x_gold_1_o_4  x_gold_1_o_5  x_gold_1_o_6  x_gold_1_o_7 
+ x_gold_1_o_8  x_gold_1_o_9  x_gold_1_o_10  x_gold_1_o_11  x_gold_1_o_12 
+ x_gold_1_o_13  x_gold_1_o_14  x_gold_1_o_15  x_gold_2_l_0  x_gold_2_l_1 
+ x_gold_2_l_2  x_gold_2_l_3  x_gold_2_l_4  x_gold_2_l_5  x_gold_2_l_6 
+ x_gold_2_l_7  x_gold_2_l_8  x_gold_2_l_9  x_gold_2_l_10  x_gold_2_l_11 
+ x_gold_2_l_12  x_gold_2_l_13  x_gold_2_l_14  x_gold_2_l_15  x_gold_3_d_0 
+ x_gold_3_d_1  x_gold_3_d_2  x_gold_3_d_3  x_gold_3_d_4  x_gold_3_d_5 
+ x_gold_3_d_6  x_gold_3_d_7  x_gold_3_d_8  x_gold_3_d_9  x_gold_3_d_10 
+ x_gold_3_d_11  x_gold_3_d_12  x_gold_3_d_13  x_gold_3_d_14  x_gold_3_d_15 
+ x_blue_0_b_0  x_blue_0_b_1  x_blue_0_b_2  x_blue_0_b_3  x_blue_0_b_4 
+ x_blue_0_b_5  x_blue_0_b_6  x_blue_0_b_7  x_blue_0_b_8  x_blue_0_b_9 
+ x_blue_0_b_10  x_blue_0_b_11  x_blue_0_b_12  x_blue_0_b_13  x_blue_0_b_14 
+ x_blue_0_b_15  x_blue_1_l_0  x_blue_1_l_1  x_blue_1_l_2  x_blue_1_l_3 
+ x_blue_1_l_4  x_blue_1_l_5  x_blue_1_l_6  x_blue_1_l_7  x_blue_1_l_8 
+ x_blue_1_l_9  x_blue_1_l_10  x_blue_1_l_11  x_blue_1_l_12  x_blue_1_l_13 
+ x_blue_1_l_14  x_blue_1_l_15  x_blue_2_u_0  x_blue_2_u_1  x_blue_2_u_2 
+ x_blue_2_u_3  x_blue_2_u_4  x_blue_2_u_5  x_blue_2_u_6  x_blue_2_u_7 
+ x_blue_2_u_8  x_blue_2_u_9  x_blue_2_u_10  x_blue_2_u_11  x_blue_2_u_12 
+ x_blue_2_u_13  x_blue_2_u_14  x_blue_2_u_15  x_blue_3_e_0  x_blue_3_e_1 
+ x_blue_3_e_2  x_blue_3_e_3  x_blue_3_e_4  x_blue_3_e_5  x_blue_3_e_6 
+ x_blue_3_e_7  x_blue_3_e_8  x_blue_3_e_9  x_blue_3_e_10  x_blue_3_e_11 
+ x_blue_3_e_12  x_blue_3_e_13  x_blue_3_e_14  x_blue_3_e_15  x_red_0_r_0 
+ x_red_0_r_1  x_red_0_r_2  x_red_0_r_3  x_red_0_r_4  x_red_0_r_5  x_red_0_r_6 
+ x_red_0_r_7  x_red_0_r_8  x_red_0_r_9  x_red_0_r_10  x_red_0_r_11 
+ x_red_0_r_12  x_red_0_r_13  x_red_0_r_14  x_red_0_r_15  x_red_1_e_0 
+ x_red_1_e_1  x_red_1_e_2  x_red_1_e_3  x_red_1_e_4  x_red_1_e_5  x_red_1_e_6 
+ x_red_1_e_7  x_red_1_e_8  x_red_1_e_9  x_red_1_e_10  x_red_1_e_11 
+ x_red_1_e_12  x_red_1_e_13  x_red_1_e_14  x_red_1_e_15  x_red_2_d_0 
+ x_red_2_d_1  x_red_2_d_2  x_red_2_d_3  x_red_2_d_4  x_red_2_d_5  x_red_2_d_6 
+ x_red_2_d_7  x_red_2_d_8  x_red_2_d_9  x_red_2_d_10  x_red_2_d_11 
+ x_red_2_d_12  x_red_2_d_13  x_red_2_d_14  x_red_2_d_15 
 End
